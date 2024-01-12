@@ -1,7 +1,12 @@
 baseURL = 'https://oliviervanaken.com/'
-languageCode = 'en-us'
 title = 'Olivier Van Aken'
+
+enableRobotsTXT = true
+languageCode = 'en-us'
+
+[minify]
+minifyOutput = true
 
 [module]
 [[module.imports]]
-    path = 'github.com/adityatelange/hugo-PaperMod'
+path = 'github.com/adityatelange/hugo-PaperMod'
