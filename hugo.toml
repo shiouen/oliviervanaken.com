@@ -1,4 +1,4 @@
 baseURL = 'https://oliviervanaken.com/'
 languageCode = 'en-us'
-theme = "papermod"
+theme = 'hugo-PaperMod-7.0'
 title = 'Olivier Van Aken'
