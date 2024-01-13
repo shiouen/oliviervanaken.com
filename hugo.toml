@@ -48,7 +48,7 @@ imageWidth = 120
 imageHeight = 120
 
 [[params.profileMode.buttons]]
-name = "Curriculum Vitae"
+name = "Résumé"
 url = "/404"
 
 [[params.socialIcons]]
