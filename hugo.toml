@@ -1,6 +1,7 @@
 baseURL = 'https://oliviervanaken.com/'
-title = 'Olivier Van Aken'
+title = 'oliviervanaken.com'
 
+enableEmoji = true
 enableRobotsTXT = true
 languageCode = 'en-us'
 
@@ -10,3 +11,62 @@ minifyOutput = true
 [module]
 [[module.imports]]
 path = 'github.com/adityatelange/hugo-PaperMod'
+
+[params]
+keywords = ["developer", "blog", "page", "cv"]
+ShowCodeCopyButtons = true
+ShowBreadCrumbs = true
+ShowReadingTime = true
+ShowShareButtons = false
+
+[params.menu]
+[[params.menu.main]]
+identifier = "categories"
+name = "categories"
+url = "/categories/"
+weight = 10
+
+[[params.menu.main]]
+identifier = "tags"
+name = "tags"
+url = "/tags/"
+weight = 20
+
+[[params.menu.main]]
+identifier = "example"
+name = "example.org"
+url = "https://example.org"
+weight = 30
+
+[params.profileMode]
+enabled = true
+title = "Olivier Van Aken"
+subtitle = "Senior Developer, Technical Advisor and Mentor"
+imageUrl = "https://avatars.githubusercontent.com/u/4215955?v=4"
+imageTitle = "Profile picture"
+imageWidth = 120
+imageHeight = 120
+
+[[params.profileMode.buttons]]
+name = "Curriculum Vitae"
+url = "/404"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:olivier@restechnica.io"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/oliviervanaken/"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/shiouen"
+
+[[params.socialIcons]]
+name = "instagram"
+url = "https://www.instagram.com/olivier.va/"
+
+[[params.socialIcons]]
+name = "phone"
+url = "tel:+32476742003"
