@@ -4,6 +4,17 @@ title = "oliviervanaken.com"
 enableEmoji = true
 enableRobotsTXT = true
 languageCode = "en-us"
+paginate = 5
+
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 20
 
 [minify]
 minifyOutput = true
@@ -12,32 +23,16 @@ minifyOutput = true
 [[module.imports]]
 path = "github.com/adityatelange/hugo-PaperMod"
 
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
 [params]
 defaultTheme = "auto"
-keywords = ["developer", "blog", "page", "cv"]
+keywords = ["developer", "blog", "page", "cv", "resume"]
 ShowCodeCopyButtons = true
 ShowBreadCrumbs = true
 ShowReadingTime = true
 ShowShareButtons = false
-
-[params.menu]
-[[params.menu.main]]
-identifier = "categories"
-name = "categories"
-url = "/categories/"
-weight = 10
-
-[[params.menu.main]]
-identifier = "tags"
-name = "tags"
-url = "/tags/"
-weight = 20
-
-[[params.menu.main]]
-identifier = "example"
-name = "example.org"
-url = "https://example.org"
-weight = 30
 
 [params.profileMode]
 enabled = true
