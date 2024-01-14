@@ -6,10 +6,10 @@ enableRobotsTXT = true
 languageCode = "en-us"
 paginate = 5
 
-[[menu.main]]
-name = "Posts"
-url = "/posts/"
-weight = 10
+#[[menu.main]]
+#name = "Posts"
+#url = "/posts/"
+#weight = 10
 
 [[menu.main]]
 name = "About"
@@ -29,17 +29,21 @@ home = ["HTML", "RSS", "JSON"]
 [params]
 defaultTheme = "auto"
 keywords = ["developer", "blog", "page", "cv", "resume"]
+ShowAllPagesInArchive = true
 ShowCodeCopyButtons = true
 ShowBreadCrumbs = true
+ShowPageNums = true
 ShowReadingTime = true
-ShowShareButtons = false
+ShowRssButtonInSectionTermList = true
+ShowShareButtons = true
+ShowToc = true
 
 [params.profileMode]
 enabled = true
 title = "Olivier Van Aken"
 subtitle = "Senior Developer, Technical Advisor and Mentor"
-imageUrl = "https://avatars.githubusercontent.com/u/4215955?v=4"
-imageTitle = "Profile picture"
+imageUrl = "images/profile.png"
+imageTitle = "profile_picture"
 imageWidth = 120
 imageHeight = 120
 
