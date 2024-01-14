@@ -49,7 +49,7 @@ imageHeight = 120
 
 [[params.profileMode.buttons]]
 name = "Résumé"
-url = "/404"
+url = "resume.pdf"
 
 [[params.socialIcons]]
 name = "email"
