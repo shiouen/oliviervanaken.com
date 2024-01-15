@@ -5,6 +5,8 @@ const infra_path = "infra"
 
 let env_vars = (open env.json)
 
+echo $env_vars
+
 def build-app [] {
     echo "building app..."
     cd $app_path
