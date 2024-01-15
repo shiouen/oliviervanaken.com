@@ -1,9 +1,15 @@
-### Jetbrains
-.idea
-
-### Project
+### Dotenv
 .env
+env.json
 
 ### Hugo
 public/
 themes/
+
+### Jetbrains
+.idea
+
+### Terraform
+*.terraform.*
+*.terraform
+terraform*
