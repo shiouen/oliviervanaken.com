@@ -8,7 +8,7 @@
     ·
     {{- if getenv "RELEASE_VERSION" }}
     <span>
-        <a href="https://github.com/shiouen/oliviervanaken.com/releases/tag/v{{ getenv "RELEASE_VERSION" }}">
+        <a href="https://{{ .Param "GitRepositoryUrl" }}/releases/tag/v{{ getenv "RELEASE_VERSION" }}" target="_blank">
             v{{ getenv "RELEASE_VERSION" }}
         </a>
     </span>

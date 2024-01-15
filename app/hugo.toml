@@ -29,6 +29,7 @@ home = ["HTML", "RSS", "JSON"]
 [params]
 defaultTheme = "auto"
 keywords = ["developer", "blog", "page", "cv", "resume"]
+GitRepositoryUrl = "github.com/shiouen/oliviervanaken.com"
 ShowAllPagesInArchive = true
 ShowCodeCopyButtons = true
 ShowBreadCrumbs = true
@@ -41,7 +42,7 @@ ShowToc = true
 [params.profileMode]
 enabled = true
 title = "Olivier Van Aken"
-subtitle = "Senior Developer, Technical Advisor and Mentor"
+subtitle = "Senior Developer, Technical Advisor and DevOps"
 imageUrl = "images/profile.png"
 imageTitle = "profile_picture"
 imageWidth = 120
