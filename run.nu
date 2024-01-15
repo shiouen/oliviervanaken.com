@@ -12,8 +12,6 @@ if ($env_path | path exists) {
 
 let env_vars = $mut_env_vars
 
-echo $env_vars
-
 def build-app [] {
     echo "building app..."
     cd $app_path
