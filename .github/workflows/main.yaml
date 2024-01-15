@@ -2,7 +2,7 @@ name: main
 
 on:
   push:
-    branches-ignore: [ main ]
+    branches: [ main ]
 
 env:
   GO_VERSION: 1.21
@@ -68,14 +68,11 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      - name: 'Use gcloud CLI'
-        run: 'gcloud info'
-
       - name: deploy
         run: nu run.nu deploy --infra
 
-#      - name: release
-#        run: |
-#          sbot update version --debug
-#          sbot release version --debug
-#          sbot push version --debug
+      - name: release
+        run: |
+          sbot update version --verbose
+          sbot release version --verbose
+          sbot push version --verbose
