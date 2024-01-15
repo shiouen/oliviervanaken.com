@@ -60,6 +60,7 @@ def deploy-infra [approve: bool = false] {
 
 def init-infra [] {
     echo "initializing infra..."
+    cd $infra_path
     terraform init
 }
 
