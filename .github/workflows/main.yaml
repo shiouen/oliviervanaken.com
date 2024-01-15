@@ -51,11 +51,21 @@ jobs:
       - name: build
         run: nu run.nu build
 
-      - name: deploy infra
+      - name: set up gcloud
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          export_default_credentials: true
+          service_account_key: ${{ secrets.GCS_SA_KEY }}
+          version: ">= 363.0.0"
+
+      - name: 'Use gcloud CLI'
+        run: 'gcloud info'
+
+      - name: deploy
         run: nu run.nu deploy --infra
 
-      - name: release
-        run: |
-          sbot update version --debug
-          sbot release version --debug
-          sbot push version --debug
+#      - name: release
+#        run: |
+#          sbot update version --debug
+#          sbot release version --debug
+#          sbot push version --debug
