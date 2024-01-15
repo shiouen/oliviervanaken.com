@@ -3,7 +3,14 @@
 const app_path = "app"
 const infra_path = "infra"
 
-let env_vars = (open env.json)
+const env_path = "env.json"
+mut mut_env_vars = {}
+
+if ($env_path | path exists) {
+    $mut_env_vars = (open env.json)
+}
+
+let env_vars = $mut_env_vars
 
 def build-app [] {
     echo "building app..."
@@ -18,9 +25,7 @@ def clean-app [] {
 
 def clean-infra [] {
     echo "cleaning up terraform..."
-    cd $infra_path
-    rm -rf .terraform.*
-    rm -rf *.tfstate*
+    rm -rf $"($infra_path)/**/*.tfstate*"
 }
 
 def deploy-app [] {
@@ -42,7 +47,7 @@ def deploy-infra [approve: bool = false] {
 
     terraform init
 
-    let options = {
+    mut options = {
         approve: ""
     }
 
@@ -53,17 +58,37 @@ def deploy-infra [approve: bool = false] {
     run-external terraform apply $options.approve
 }
 
+def init-infra [] {
+    echo "initializing infra..."
+    cd $infra_path
+    terraform init
+}
+
 def load-env-vars [] {
     echo "loading env vars..."
     load-env $env_vars
+}
+
+def try-infra [] {
+    echo "trying infra..."
+    cd $infra_path
+    terraform plan
 }
 
 def "main build" [] {
     build-app
 }
 
+def "main try-infra" [] {
+    with-env $env_vars {
+        init-infra
+        try-infra
+    }
+}
+
 def "main clean" [] {
     clean-app
+    clean-infra
 }
 
 def "main deploy" [--infra (-i)] {

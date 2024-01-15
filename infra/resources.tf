@@ -3,13 +3,13 @@ resource "aws_acm_certificate" "certificate" {
   subject_alternative_names = [local.domain_name]
   validation_method         = "DNS"
 
-  provider = "aws.us-east-1"
+  provider = aws.us-east-1
 }
 
 resource "aws_acm_certificate_validation" "certificate_validation" {
   certificate_arn = aws_acm_certificate.certificate.arn
 
-  provider = "aws.us-east-1"
+  provider = aws.us-east-1
 }
 
 resource "aws_cloudfront_distribution" "distribution" {

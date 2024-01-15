@@ -14,3 +14,10 @@ provider "aws" {
     tags = local.tags
   }
 }
+
+terraform {
+  backend "gcs" {
+    bucket = "rt-terraform-backends"
+    prefix = "oliviervaken.com"
+  }
+}

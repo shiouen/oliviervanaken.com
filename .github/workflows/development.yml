@@ -1,0 +1,72 @@
+name: development
+
+on:
+  push:
+    branches-ignore: [ main ]
+
+env:
+  GO_VERSION: 1.21
+  HUGO_VERSION: 0.121.0
+  NUSHELL_VERSION: 0.88.0
+  SBOT_VERSION: 1.4.1
+
+jobs:
+  build:
+    name: pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: set up go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{ env.GO_VERSION }}
+
+      - name: set up hugo
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: set up nushell
+        uses: hustcer/setup-nu@v3.8
+        with:
+          version: ${{ env.NUSHELL_VERSION }}
+
+      - name: set up path
+        run: |
+          mkdir bin
+          echo "$(pwd)/bin" >> $GITHUB_PATH
+
+      - name: install semverbot
+        run: |
+          curl -o bin/sbot -L https://github.com/restechnica/semverbot/releases/download/v$SBOT_VERSION/sbot-linux-amd64
+          chmod +x bin/sbot
+
+      - name: prepare release
+        run: |
+          sbot update version --verbose
+          release_version="$(sbot predict version --verbose)"
+          echo "RELEASE_VERSION=${release_version}" >> $GITHUB_ENV
+
+      - name: build
+        run: nu run.nu build
+
+      - name: authenticate gcs
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCS_SA_KEY }}
+
+      - name: set up gcloud
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          version: ">= 363.0.0"
+
+      - name: authenticate aws
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: eu-central-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: try infra
+        run: nu run.nu try-infra
