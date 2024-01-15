@@ -49,7 +49,7 @@ def deploy-infra [approve: bool = false] {
 
     terraform init
 
-    let options = {
+    mut options = {
         approve: ""
     }
 
