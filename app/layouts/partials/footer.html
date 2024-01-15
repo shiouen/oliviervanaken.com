@@ -5,7 +5,18 @@
     {{- else }}
     <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
     {{- end }}
-    <span>{{ default .GitInfo.AbbreviatedHash (getenv "RELEASE_VERSION") }}</span>
+    ·
+    {{- if getenv "RELEASE_VERSION" }}
+    <span>
+        <a href="https://github.com/shiouen/oliviervanaken.com/releases/tag/v{{ getenv "RELEASE_VERSION" }}">
+            v{{ getenv "RELEASE_VERSION" }}
+        </a>
+    </span>
+
+    {{- else }}
+    <span>v0.0.0-local</span>
+    {{- end }}
+    ·
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

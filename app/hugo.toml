@@ -2,7 +2,6 @@ baseURL = "https://oliviervanaken.com/"
 title = "oliviervanaken.com"
 
 enableEmoji = true
-enableGitInfo = true
 enableRobotsTXT = true
 languageCode = "en-us"
 paginate = 5
