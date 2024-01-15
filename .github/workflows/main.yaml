@@ -49,7 +49,7 @@ jobs:
           echo "RELEASE_VERSION=${release_version}" >> $GITHUB_ENV
 
       - name: build
-        run: nu run.nu builds
+        run: nu run.nu build
 
       - name: deploy infra
         run: nu run.nu deploy --infra
