@@ -15,11 +15,12 @@ jobs:
     name: pipeline
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: set up go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v5
         with:
+          cache-dependency-path: app/go.sum
           go-version: ${{ env.GO_VERSION }}
 
       - name: set up hugo
