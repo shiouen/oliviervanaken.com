@@ -2,6 +2,7 @@ baseURL = "https://oliviervanaken.com/"
 title = "oliviervanaken.com"
 
 enableEmoji = true
+enableGitInfo = true
 enableRobotsTXT = true
 languageCode = "en-us"
 paginate = 5
@@ -70,3 +71,7 @@ url = "https://www.instagram.com/olivier.va/"
 [[params.socialIcons]]
 name = "phone"
 url = "tel:+32476742003"
+
+[security]
+[security.funcs]
+getenv = ['RELEASE_VERSION']

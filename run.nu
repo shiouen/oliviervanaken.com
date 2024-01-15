@@ -66,11 +66,10 @@ def "main clean" [] {
     clean-app
 }
 
-
 def "main deploy" [--infra (-i)] {
     with-env $env_vars {
         if $infra {
-            main deploy-infra
+            main deploy-infra --approve
         }
 
         main deploy-app
