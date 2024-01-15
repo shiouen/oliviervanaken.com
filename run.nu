@@ -3,7 +3,12 @@
 const app_path = "app"
 const infra_path = "infra"
 
-let env_vars = (open env.json)
+const env_path = "env.json"
+let env_vars = {}
+
+if env_path | path exists {
+    env_vars = (open env.json)
+}
 
 echo $env_vars
 
