@@ -25,9 +25,7 @@ def clean-app [] {
 
 def clean-infra [] {
     echo "cleaning up terraform..."
-    cd $infra_path
-    rm -rf .terraform.*
-    rm -rf *.tfstate*
+    rm -rf $"($infra_path)/**/*.tfstate*"
 }
 
 def deploy-app [] {
@@ -71,6 +69,7 @@ def "main build" [] {
 
 def "main clean" [] {
     clean-app
+    clean-infra
 }
 
 def "main deploy" [--infra (-i)] {
