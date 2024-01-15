@@ -4,11 +4,13 @@ const app_path = "app"
 const infra_path = "infra"
 
 const env_path = "env.json"
-let env_vars = {}
+mut mut_env_vars = {}
 
-if env_path | path exists {
-    env_vars = (open env.json)
+if ($env_path | path exists) {
+    $mut_env_vars = (open env.json)
 }
+
+let env_vars = $mut_env_vars
 
 echo $env_vars
 
