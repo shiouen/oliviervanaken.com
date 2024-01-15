@@ -3,6 +3,8 @@
 const app_path = "app"
 const infra_path = "infra"
 
+let env_vars = (open env.json)
+
 def build-app [] {
     echo "building app..."
     cd $app_path
@@ -17,26 +19,43 @@ def clean-app [] {
 def clean-infra [] {
     echo "cleaning up terraform..."
     cd $infra_path
-    rm -rf .terraform*
+    rm -rf .terraform.*
     rm -rf *.tfstate*
 }
 
 def deploy-app [] {
     echo "deploying app..."
+    cd $app_path
+
+    const dist_path = "public"
+    const ssm_path = "/oliviervanaken.com"
+
+    let bucket_name = (aws ssm get-parameter --name "/oliviervanaken.com/bucket-name" --no-cli-pager) | from json | get Parameter.Value
+
+    aws s3 sync $dist_path $"s3://($bucket_name)" --exclude "*.txt" --cache-control "max-age=604800"
 }
 
-def deploy-infra [auto_approve: bool = false] {
+def deploy-infra [approve: bool = false] {
     echo "deploying infra..."
+
     cd $infra_path
+
     terraform init
 
-    let command = ["terraform", "apply"]
-
-    if $auto_approve {
-        command = ($command | append "-auto-approve" )
+    let options = {
+        approve: ""
     }
 
-    do $command
+    if $approve {
+        $options.approve = "-auto-approve"
+    }
+
+    run-external terraform apply $options.approve
+}
+
+def load-env-vars [] {
+    echo "loading env vars..."
+    load-env $env_vars
 }
 
 def "main build" [] {
@@ -49,19 +68,25 @@ def "main clean" [] {
 
 
 def "main deploy" [--infra (-i)] {
-    if $infra {
-        main deploy-infra
-    }
+    with-env $env_vars {
+        if $infra {
+            main deploy-infra
+        }
 
-    main deploy-app
+        main deploy-app
+    }
 }
 
 def "main deploy-app" [] {
-    deploy-app
+    with-env $env_vars {
+        deploy-app
+    }
 }
 
-def "main deploy-infra" [--auto-approve (-a)] {
-    deploy-infra $auto_approve
+def "main deploy-infra" [--approve (-a)] {
+    with-env $env_vars {
+        deploy-infra $approve
+    }
 }
 
 def "main serve" [] {
