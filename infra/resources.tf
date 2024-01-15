@@ -119,3 +119,27 @@ resource "aws_s3_bucket_policy" "bucket-policy" {
   bucket = aws_s3_bucket.bucket.bucket
   policy = data.aws_iam_policy_document.bucket-policy-document.json
 }
+
+resource "aws_ssm_parameter" "bucket_name" {
+  name  = "${local.ssm_path}/bucket-name"
+  type  = "String"
+  value = aws_s3_bucket.bucket.bucket
+}
+
+resource "aws_ssm_parameter" "acm_certificate_arn" {
+  name  = "${local.ssm_path}/acm-certificate-arn"
+  type  = "String"
+  value = aws_acm_certificate.certificate.arn
+}
+
+resource "aws_ssm_parameter" "hosted_zone_name" {
+  name  = "${local.ssm_path}/hosted-zone-name"
+  type  = "String"
+  value = aws_route53_zone.hosted_zone.name
+}
+
+resource "aws_ssm_parameter" "hosted_zone_id" {
+  name  = "${local.ssm_path}/hosted-zone-id"
+  type  = "String"
+  value = aws_route53_zone.hosted_zone.zone_id
+}
