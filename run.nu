@@ -58,13 +58,31 @@ def deploy-infra [approve: bool = false] {
     run-external terraform apply $options.approve
 }
 
+def init-infra [] {
+    echo "initializing infra..."
+    terraform init
+}
+
 def load-env-vars [] {
     echo "loading env vars..."
     load-env $env_vars
 }
 
+def try-infra [] {
+    echo "trying infra..."
+    cd $infra_path
+    terraform plan
+}
+
 def "main build" [] {
     build-app
+}
+
+def "main try-infra" [] {
+    with-env $env_vars {
+        init-infra
+        try-infra
+    }
 }
 
 def "main clean" [] {
