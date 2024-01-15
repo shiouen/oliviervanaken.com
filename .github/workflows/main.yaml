@@ -1,0 +1,55 @@
+name: main
+
+on:
+  push:
+    branches-ignore: [ main ]
+
+env:
+  GO_VERSION: 1.20.5
+  HUGO_VERSION: 0.121.0
+  SBOT_VERSION: 1.4.1
+
+jobs:
+  build:
+    name: pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: set up go
+        uses: actions/setup-go@v2
+        with:
+          go-version: $GO_VERSION
+
+      - name: set up hugo
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: set up path
+        run: |
+          mkdir bin
+          echo "$(pwd)/bin" >> $GITHUB_PATH
+
+      - name: install semverbot
+        run: |
+          curl -o bin/sbot -L https://github.com/restechnica/semverbot/releases/download/v$SBOT_VERSION/sbot-linux-amd64
+          chmod +x bin/sbot
+
+      - name: prepare release
+        run: |
+          sbot update version --verbose
+          release_version="$(sbot predict version --verbose)"
+          echo "RELEASE_VERSION=${release_version}" >> $GITHUB_ENV
+
+      - name: build
+        run: nu run.nu builds
+
+      - name: deploy infra
+        run: nu run.nu deploy --infra
+
+      - name: release
+        run: |
+          sbot update version --debug
+          sbot release version --debug
+          sbot push version --debug
