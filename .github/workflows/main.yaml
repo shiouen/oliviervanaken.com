@@ -6,9 +6,9 @@ on:
 
 env:
   GO_VERSION: 1.21
-  HUGO_VERSION: 0.121.0
-  NUSHELL_VERSION: 0.88.0
-  SBOT_VERSION: 1.4.1
+  HUGO_VERSION: 0.147.3
+  NUSHELL_VERSION: 0.98.0
+  SBOT_VERSION: 1.7.2
 
 jobs:
   build:
@@ -60,7 +60,7 @@ jobs:
       - name: set up gcloud
         uses: google-github-actions/setup-gcloud@v2
         with:
-          version: ">= 363.0.0"
+          version: ">= 522.0.0"
 
       - name: authenticate aws
         uses: aws-actions/configure-aws-credentials@v4
@@ -68,6 +68,9 @@ jobs:
           aws-region: eu-central-1
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: set up terraform
+        uses: hashicorp/setup-terraform@v3
 
       - name: deploy
         run: nu run.nu deploy --infra

@@ -6,3 +6,54 @@
 [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](./app/content/LICENSE)
 
 Professional developer web page for Olivier Van Aken.
+
+## Requirements
+
+### Development
+
+* Golang: 1.21
+* Hugo: 0.147.3
+* PaperMod: 8.0
+
+### Infrastructure
+
+* AWS CLI: 2.0.0
+* Google Cloud SDK: 522.0.0
+* Nushell: 0.98.0
+* Terraform: 1.12.0
+
+## Commands
+
+### Building the app
+
+```sh
+nu run.nu build
+```
+
+### Serve the app locally
+
+```sh
+nu run.nu serve
+```
+
+### Clean up app and infra
+
+```sh
+nu run.nu clean
+```
+
+### Deploy the app
+
+```sh
+nu run.nu deploy [--infra]
+```
+
+--infra: deploy the infrastructure as well
+
+### Deploy only infra
+
+```sh
+nu run.nu deploy-infra
+```
+
+For more technical information check [run.nu](./run.nu)
