@@ -10,6 +10,7 @@ Professional developer web page for Olivier Van Aken.
 ## Requirements
 
 ### Development
+
 * Golang: 1.21
 * Hugo: 0.147.3
 * PaperMod: 8.0
