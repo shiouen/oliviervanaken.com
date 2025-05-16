@@ -69,5 +69,8 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
+      - name: set up terraform
+        uses: hashicorp/setup-terraform@v3
+
       - name: try infra
         run: nu run.nu try-infra
