@@ -4,7 +4,6 @@ title = "oliviervanaken.com"
 enableEmoji = true
 enableRobotsTXT = true
 languageCode = "en-us"
-paginate = 5
 
 #[[menu.main]]
 #name = "Posts"
@@ -25,6 +24,9 @@ path = "github.com/adityatelange/hugo-PaperMod"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
+[pagination]
+pagerSize = 5
 
 [params]
 defaultTheme = "auto"
