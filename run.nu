@@ -45,7 +45,7 @@ def deploy-infra [approve: bool = false] {
 
     cd $infra_path
 
-    terraform init
+    run-external terraform init
 
     mut options = {
         approve: ""
@@ -61,7 +61,7 @@ def deploy-infra [approve: bool = false] {
 def init-infra [] {
     echo "initializing infra..."
     cd $infra_path
-    terraform init
+    run-external terraform init
 }
 
 def load-env-vars [] {
@@ -72,7 +72,7 @@ def load-env-vars [] {
 def try-infra [] {
     echo "trying infra..."
     cd $infra_path
-    terraform plan
+    run-external terraform plan
 }
 
 def "main build" [] {
