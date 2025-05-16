@@ -9,10 +9,16 @@ Professional developer web page for Olivier Van Aken.
 
 ## Requirements
 
+### Development
 * Golang: 1.21
 * Hugo: 0.147.3
-* Nushell: 0.98.0
 * PaperMod: 8.0
+
+### Infrastructure
+
+* AWS CLI: 2.0.0
+* Google Cloud SDK: 522.0.0
+* Nushell: 0.98.0
 * Terraform: 1.12.0
 
 ## Commands
