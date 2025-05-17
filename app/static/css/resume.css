@@ -29,7 +29,7 @@ h2 {
 }
 
 .resume-column-right {
-    flex: 2
+    flex: 1.6
 }
 
 .resume-content {
@@ -37,14 +37,16 @@ h2 {
     flex-direction: row;
     gap: 35px;
     justify-content: center;
-    padding: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 25px;
 }
 
 .resume-content-header {
     align-items: center;
-    display: grid;
-    gap: 16px;
-    grid-template-columns: auto 1fr;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .resume-header {
@@ -62,6 +64,7 @@ h2 {
     h2 {
         color: #ffffff;
         font-family: "Poppins", sans-serif;
+        font-size: 16px;
         font-weight: 400;
         text-transform: none;
     }
@@ -72,6 +75,7 @@ h2 {
 }
 
 .resume-separator {
+    flex: 1;
     height: 1px;
     background-color: #000000;
 }
