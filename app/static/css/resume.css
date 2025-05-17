@@ -79,17 +79,17 @@ h2 {
 }
 
 .resume-column-left {
-    flex: 1
+    flex: 9
 }
 
 .resume-column-right {
-    flex: 1.6
+    flex: 16
 }
 
 .resume-content {
     display: flex;
     flex-direction: row;
-    gap: 35px;
+    gap: 25px;
     justify-content: center;
     padding-left: 35px;
     padding-right: 35px;
