@@ -59,6 +59,9 @@ certificates:
   - icon: /images/aws.png
     institution: Amazon Web Services (AWS)
     name: Developer Associate
+  - icon: /images/scrum.png
+    institution: Scrum.org
+    name: Professional Scrum Master I
 
 # language
 language:
