@@ -1,0 +1,85 @@
+# header
+name: Olivier Van Aken
+title: DevOps Engineer
+
+# contact
+email: olivier@restechnica.io
+github: github.com/shiouen
+linkedin: linkedin.com/in/oliviervanaken
+phone: +32476742003
+website: oliviervanaken.com
+
+# objective
+objective: >
+  test test
+
+# skills
+skills:
+  - name: Go
+  - name: JavaScript
+  - name: Docker
+  - name: AWS
+
+# experience
+experience:
+  zetes:
+    client: Zetes People ID
+    end: 10/2024
+    icon: /images/zetes-people-id.png
+    location: Brussels, Belgium
+    role: DevOps Engineer
+    skills: [ AWS, Docker, Terraform, Automation, Python, Amazon ECS, Java, Jenkins, mTLS ]
+    start: 03/2024
+    type: Freelance
+
+  nike:
+    client: Zetes People ID
+    end: 10/2024
+    icon: /images/zetes-people-id.png
+    location: Brussels, Belgium
+    role: DevOps Engineer
+    skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
+    start: 03/2024
+    type: Freelance
+
+  telenet:
+    client: Zetes People ID
+    end: 10/2024
+    icon: /images/zetes-people-id.png
+    location: Brussels, Belgium
+    role: DevOps Engineer
+    skills: [ AWS, Docker, Terraform, Automation, Python, Amazon ECS, Java, Jenkins, mTLS ]
+    start: 03/2024
+    type: Freelance
+
+certificates:
+  - icon: /images/aws.png
+    institution: Amazon Web Services (AWS)
+    name: Solutions Architect Associate
+  - icon: /images/aws.png
+    institution: Amazon Web Services (AWS)
+    name: Developer Associate
+
+# language
+language:
+  - name: Dutch
+    level: Native
+  - name: English
+    level: Fluent
+  - name: French
+    level: Conversational
+  - name: German
+    level: Basic
+
+# education
+education:
+  - degree: Bachelor of Applied Science (B.A.Sc.), Computer Sciences
+    end: 2013
+    institution: Karel de Grote, Antwerp
+    icon: /images/kdg.png
+    start: 2011
+  - degree: Bachelor of Science (B.Sc.), Computer Sciences
+    end: 2013
+    icon: /images/ua.png
+    institution: University of Antwerp
+    start: 2011
