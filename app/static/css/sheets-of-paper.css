@@ -76,8 +76,8 @@ div.page-break {
 }
 /* For top-level headings only */
 h1 {
-	/* Force page breaks after */
-	page-break-before: always;
+	/* Force page breaks after; EDIT: causes first page to be blank */
+	/*page-break-before: always;*/
 }
 /* For all headings */
 h1, h2, h3, h4, h5, h6 {
