@@ -5,7 +5,7 @@ title: DevOps Engineer
 # contact
 socials:
   - name: phone
-    prefix: 'tel:'
+    prefix: "tel:"
     value: "+32476742003"
   - name: email
     prefix: "mailto:"
