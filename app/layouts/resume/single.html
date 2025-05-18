@@ -19,6 +19,22 @@
                     <h2>Contact</h2>
                     <div class="resume-separator"></div>
                 </div>
+
+                <div class="resume-content-container">
+                    <ul class="resume-contact-list">
+                        {{- range .Site.Data.resume.socials }}
+                            <li class="resume-contact-item">
+                                {{ partial "svg.html" . }}
+                                <span>
+                                    <a href="{{ printf "%s%s" .prefix .value | safeURL }}"
+                                       target="_blank" rel="noopener noreferrer">
+                                        {{ .value }}
+                                    </a>
+                                </span>
+                            </li>
+                        {{- end }}
+                    </ul>
+                </div>
             </div>
 
             <div class="resume-skills">
@@ -56,6 +72,10 @@
                 <div class="resume-content-header">
                     <h2>Objective</h2>
                     <div class="resume-separator"></div>
+                </div>
+
+                <div class="resume-content-container">
+                    Freelance IT professional with a big heart for AWS Cloud and DevOps. Passionate traveller, problem solver and eager to bring your applications to the Cloud!
                 </div>
             </div>
 

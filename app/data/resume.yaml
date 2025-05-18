@@ -3,11 +3,22 @@ name: Olivier Van Aken
 title: DevOps Engineer
 
 # contact
-email: olivier@restechnica.io
-github: github.com/shiouen
-linkedin: linkedin.com/in/oliviervanaken
-phone: +32476742003
-website: oliviervanaken.com
+socials:
+  - name: phone
+    prefix: 'tel:'
+    value: "+32476742003"
+  - name: email
+    prefix: "mailto:"
+    value: "olivier@restechnica.io"
+  - name: website
+    prefix: "https://"
+    value: "oliviervanaken.com"
+  - name: linkedin
+    prefix: "https://"
+    value: "linkedin.com/in/oliviervanaken"
+  - name: github
+    prefix: "https://"
+    value: "github.com/shiouen"
 
 # objective
 objective: >
