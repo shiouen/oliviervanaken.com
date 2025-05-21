@@ -75,13 +75,13 @@ experience:
     type: Freelance
 
 certificates:
-  - icon: /images/aws.png
+  - icon: aws
     issuer: Amazon Web Services (AWS)
     name: Solutions Architect Associate
-  - icon: /images/aws.png
+  - icon: aws
     issuer: Amazon Web Services (AWS)
     name: Developer Associate
-  - icon: /images/scrum.png
+  - icon: scrum
     issuer: Scrum.org
     name: Professional Scrum Master I
 
