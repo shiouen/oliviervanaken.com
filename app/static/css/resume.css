@@ -157,6 +157,13 @@ ul {
     font-size: 11px;
 }
 
+.resume-education-item {
+    svg {
+        padding-top: 5px;
+        width: 20px;
+    }
+}
+
 .resume-header {
     background-color: #384257;
     display: flex;
