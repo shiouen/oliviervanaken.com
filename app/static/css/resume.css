@@ -153,6 +153,10 @@ ul {
     gap: 20px;
 }
 
+.resume-education-degree, .resume-education-date {
+    font-size: 11px;
+}
+
 .resume-header {
     background-color: #384257;
     display: flex;

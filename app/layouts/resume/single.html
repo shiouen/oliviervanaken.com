@@ -106,6 +106,21 @@
                     <h2>Education</h2>
                     <div class="resume-separator"></div>
                 </div>
+
+                <div class="resume-content-container">
+                    <ul class="resume-education-list">
+                        {{- range .Site.Data.resume.education }}
+                            <li class="resume-education-item">
+                                {{ partial "custom_svg.html" .icon }}
+                                <div>
+                                    <p class="resume-education-issuer">{{ .issuer }}</p>
+                                    <p class="resume-education-degree">{{ .degree }}</p>
+                                    <p class="resume-education-date">{{ .started }} - {{ .ended }}</p>
+                                </div>
+                            </li>
+                        {{- end }}
+                    </ul>
+                </div>
             </div>
         </div>
 

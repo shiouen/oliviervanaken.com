@@ -99,12 +99,12 @@ language:
 # education
 education:
   - degree: Bachelor of Applied Science (B.A.Sc.), Computer Sciences
-    end: 2013
-    institution: Karel de Grote, Antwerp
-    icon: /images/kdg.png
-    start: 2011
+    ended: 2013
+    issuer: Karel de Grote, Antwerp
+    icon: kdg
+    started: 2011
   - degree: Bachelor of Science (B.Sc.), Computer Sciences
-    end: 2013
-    icon: /images/ua.png
-    institution: University of Antwerp
-    start: 2011
+    ended: 2013
+    icon: ua
+    issuer: University of Antwerp
+    started: 2011
