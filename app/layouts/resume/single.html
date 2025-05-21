@@ -50,10 +50,10 @@
                                 <p>{{ .name }}</p>
                                 <div class="resume-skill-rating">
                                     {{- range seq .rating }}
-                                        <div class="resume-skill-bar resume-skill-bar--dark"></div>
+                                        <div class="resume-skill-bar">{{ partial "custom_svg.html" "round_rect" }}</div>
                                     {{- end }}
                                     {{ range seq (sub 5 .rating) }}
-                                        <div class="resume-skill-bar resume-skill-bar--light"></div>
+                                        <div class="resume-skill-bar resume-skill-bar--light">{{ partial "custom_svg.html" "round_rect" }}</div>
                                     {{ end }}
                                 </div>
                             </li>
@@ -72,7 +72,7 @@
                     <ul class="resume-certificate-list">
                         {{- range .Site.Data.resume.certificates }}
                             <li class="resume-certificate-item">
-                                {{ partial "custom_svg.html" . }}
+                                {{ partial "custom_svg.html" .icon }}
                                 <div>
                                     <p>{{ .name }}</p>
                                     <p class="resume-certificate-issuer">{{ .issuer }}</p>
