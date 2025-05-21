@@ -164,6 +164,12 @@ ul {
     }
 }
 
+.resume-education-item--kdg {
+    svg {
+        width: 25px;
+    }
+}
+
 .resume-header {
     background-color: #384257;
     display: flex;

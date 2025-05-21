@@ -110,7 +110,7 @@
                 <div class="resume-content-container">
                     <ul class="resume-education-list">
                         {{- range .Site.Data.resume.education }}
-                            <li class="resume-education-item">
+                            <li class="resume-education-item resume-education-item--{{ .icon }}">
                                 {{ partial "custom_svg.html" .icon }}
                                 <div>
                                     <p class="resume-education-issuer">{{ .issuer }}</p>
