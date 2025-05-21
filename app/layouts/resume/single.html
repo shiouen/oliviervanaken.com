@@ -43,6 +43,23 @@
                     <div class="resume-separator"></div>
                 </div>
 
+                <div class="resume-content-container">
+                    <ul>
+                        {{- range .Site.Data.resume.skills }}
+                            <li class="resume-skill-item">
+                                <p>{{ .name }}</p>
+                                <div class="resume-skill-rating">
+                                    {{- range seq .rating }}
+                                        <div class="resume-skill-bar resume-skill-bar--dark"></div>
+                                    {{- end }}
+                                    {{ range seq (sub 5 .rating) }}
+                                        <div class="resume-skill-bar resume-skill-bar--light"></div>
+                                    {{ end }}
+                                </div>
+                            </li>
+                        {{- end }}
+                    </ul>
+                </div>
             </div>
 
             <div class="resume-certificates">

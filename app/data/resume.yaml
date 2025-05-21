@@ -26,10 +26,20 @@ objective: >
 
 # skills
 skills:
-  - name: Go
+  - name: Python
+    rating: 5
+  - name: Golang
+    rating: 4
   - name: JavaScript
+    rating: 4
   - name: Docker
+    rating: 5
   - name: AWS
+    rating: 5
+  - name: Automation
+    rating: 5
+  - name: Databricks
+    rating: 2
 
 # experience
 experience:

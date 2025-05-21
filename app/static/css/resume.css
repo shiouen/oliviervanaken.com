@@ -76,6 +76,12 @@ h2 {
     margin: 0;
 }
 
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .resume-column {
     display: flex;
     flex-direction: column;
@@ -107,11 +113,11 @@ h2 {
     }
 }
 
-.resume-contact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+/*.resume-contact-list {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 10px;*/
+/*}*/
 
 .resume-content, .resume-header {
     padding-left: 35px;
@@ -166,4 +172,34 @@ h2 {
 .resume-separator {
     flex: 1;
     border-top: 1px solid #000000;
+}
+
+.resume-skill-item {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
+    padding-right: 8px;
+}
+
+.resume-skill-rating {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.resume-skill-bar {
+    width: 13px;
+    height: 5px;
+    border-radius: 3px;
+}
+
+.resume-skill-bar--dark {
+    background-color: #384257;
+}
+
+.resume-skill-bar--light {
+    background-color: #A8B8DA;
+
 }
