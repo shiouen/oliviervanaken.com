@@ -88,6 +88,17 @@
                     <h2>Language</h2>
                     <div class="resume-separator"></div>
                 </div>
+
+                <div class="resume-content-container">
+                    <ul class="resume-language-list">
+                        {{- range .Site.Data.resume.language }}
+                            <li class="resume-language-item">
+                                <p>{{ .name }}</p>
+                                <p>{{ .level }}</p>
+                            </li>
+                        {{- end }}
+                    </ul>
+                </div>
             </div>
 
             <div class="resume-education">

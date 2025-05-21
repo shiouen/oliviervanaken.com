@@ -76,6 +76,13 @@ h2 {
     margin: 0;
 }
 
+li {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: start;
+}
+
 p + p {
     margin: 0;
 }
@@ -91,9 +98,6 @@ ul {
 }
 
 .resume-certificate-item {
-    display: flex;
-    gap: 15px;
-
     svg {
         width: 20px;
     }
@@ -114,11 +118,6 @@ ul {
 }
 
 .resume-contact-item {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    justify-content: start;
-
     svg {
         width: 16px;
     }
@@ -176,6 +175,11 @@ ul {
     }
 }
 
+.resume-language-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .resume-page {
     padding: 0;
 }
@@ -186,9 +190,6 @@ ul {
 }
 
 .resume-skill-item {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
     justify-content: space-between;
     padding-right: 8px;
 }
