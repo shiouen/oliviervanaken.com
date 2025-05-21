@@ -69,12 +69,17 @@
                 </div>
 
                 <div class="resume-content-container">
-                    {{- range .Site.Data.resume.certificates }}
-                        <div class="resume-certificate-item">
-                            <p>{{ .name }}</p>
-                            <p>{{ .issuer }}</p>
-                        </div>
-                    {{- end }}
+                    <ul class="resume-certificate-list">
+                        {{- range .Site.Data.resume.certificates }}
+                            <li class="resume-certificate-item">
+                                {{ partial "custom_svg.html" . }}
+                                <div>
+                                    <p>{{ .name }}</p>
+                                    <p class="resume-certificate-issuer">{{ .issuer }}</p>
+                                </div>
+                            </li>
+                        {{- end }}
+                    </ul>
                 </div>
             </div>
 
