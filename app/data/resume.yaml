@@ -22,7 +22,8 @@ socials:
 
 # objective
 objective: >
-  test test
+  Freelance IT professional with a big heart for AWS Cloud and DevOps.
+  Passionate traveller, problem solver and eager to bring your applications to the Cloud!
 
 # skills
 skills:
@@ -75,13 +76,13 @@ experience:
 
 certificates:
   - icon: /images/aws.png
-    institution: Amazon Web Services (AWS)
+    issuer: Amazon Web Services (AWS)
     name: Solutions Architect Associate
   - icon: /images/aws.png
-    institution: Amazon Web Services (AWS)
+    issuer: Amazon Web Services (AWS)
     name: Developer Associate
   - icon: /images/scrum.png
-    institution: Scrum.org
+    issuer: Scrum.org
     name: Professional Scrum Master I
 
 # language

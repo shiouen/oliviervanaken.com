@@ -67,6 +67,15 @@
                     <h2>Certificates</h2>
                     <div class="resume-separator"></div>
                 </div>
+
+                <div class="resume-content-container">
+                    {{- range .Site.Data.resume.certificates }}
+                        <div class="resume-certificate-item">
+                            <p>{{ .name }}</p>
+                            <p>{{ .issuer }}</p>
+                        </div>
+                    {{- end }}
+                </div>
             </div>
 
             <div class="resume-language">
@@ -92,8 +101,7 @@
                 </div>
 
                 <div class="resume-content-container">
-                    Freelance IT professional with a big heart for AWS Cloud and DevOps.
-                    Passionate traveller, problem solver and eager to bring your applications to the Cloud!
+                    {{ .Site.Data.resume.objective }}
                 </div>
             </div>
 
