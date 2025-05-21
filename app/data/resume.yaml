@@ -39,8 +39,6 @@ skills:
     rating: 5
   - name: Automation
     rating: 5
-  - name: Databricks
-    rating: 2
 
 # experience
 experience:
@@ -99,10 +97,10 @@ language:
 # education
 education:
   - degree: Bachelor of Applied Science (B.A.Sc.), Computer Sciences
-    ended: 2013
-    issuer: Karel de Grote, Antwerp
+    ended: 2016
     icon: kdg
-    started: 2011
+    issuer: Karel de Grote, Antwerp
+    started: 2013
   - degree: Bachelor of Science (B.Sc.), Computer Sciences
     ended: 2013
     icon: ua
