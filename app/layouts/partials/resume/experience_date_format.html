@@ -1,0 +1,9 @@
+{{- $split := split . "/" -}}
+{{- $year := index $split 0 -}}
+{{- $month := index $split 1 -}}
+
+{{- $fullDate := printf "%s-%s-01T00:00:00Z" $year $month -}}
+
+{{- $parsed := time $fullDate -}}
+
+{{- time.Format "Jan 2006" $parsed -}}
