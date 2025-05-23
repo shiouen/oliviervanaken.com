@@ -142,11 +142,24 @@
                     <div class="resume-separator"></div>
                 </div>
 
-                <div class="resume-content-container">
-                    {{- range .Site.Data.resume.experience }}
-                        <h3>{{ .client }} · {{ .role }}</h3>
-                        <h4>{{ partial "resume/experience_period_format.html" . }}</h4>
-                    {{- end }}
+                <div class="resume-content-container resume-experience-container">
+                    <div class="resume-experience-timeline"></div>
+                    <ul class="resume-experience-list">
+                        {{- range .Site.Data.resume.experience }}
+                            <li class="resume-experience-item">
+                                <div>
+                                    <h3>{{ .client }} · {{ .role }}</h3>
+                                    <h4>{{ partial "resume/experience_period_format.html" . }}<br>{{ .location }}</h4>
+                                    <p>
+                                        {{ .description }}
+                                    </p>
+                                    <p>
+                                        {{ .skills }}
+                                    </p>
+                                </div>
+                            </li>
+                        {{- end }}
+                    </ul>
                 </div>
             </div>
         </div>
