@@ -184,6 +184,19 @@ ul {
     }
 }
 
+.resume-experience-anchor {
+    position: relative;
+
+    svg {
+        height: 12px;
+        left: 0;
+        position: absolute;
+        width: 12px;
+        top: 0;
+        transform: translate(-31.5px, 6px);
+    }
+}
+
 .resume-experience-container {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -192,7 +205,7 @@ ul {
 
 .resume-experience-timeline {
     border-left: 1px solid #000000;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .resume-header {
