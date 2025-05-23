@@ -51,6 +51,24 @@ experience:
     started: 2024-03
     type: Freelance
 
+  - client: Telenet
+    ended: 2024-12
+    icon: telenet
+    location: Brussels, Belgium
+    role: DevOps Engineer
+    skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
+    started: 2024-10
+    type: Freelance
+
+  - client: Moobii
+    ended: 2021-06
+    icon: moobii
+    location: Brussels, Belgium
+    role: Full Stack Engineer
+    skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
+    started: 2021-05
+    type: Freelance
+
   - client: Nike
     ended: 2024-02
     icon: nike
@@ -60,59 +78,32 @@ experience:
     started: 2020-08
     type: Freelance
 
-  - client: Telenet
-    ended: 2024-10
-    icon: telenet
-    location: Brussels, Belgium
-    role: DevOps Engineer
-    skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
-    started: 2024-09
-    type: Freelance
-
-  - client: Moobii
-    ended: 2024-10
-    icon: moobii
-    location: Brussels, Belgium
-    role: Full Stack Engineer
-    skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
-    started: 2024-10
-    type: Freelance
-
   - client: Barclays
-    ended: 2024-10
+    ended: 2019-11
     icon: barclays
     location: Manchester, UK
     role: Cloud Engineer
     skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
-    started: 2024-03
-    type: Freelance
-
-  - client: Zetes People ID
-    ended: 2024-10
-    icon: /images/zetes-people-id.png
-    location: Brussels, Belgium
-    role: DevOps Engineer
-    skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
-    started: 2024-03
+    started: 2019-09
     type: Freelance
 
   - client: ABN Amro Bank
     ended: 2019-08
     icon: abnamro
-    location: Amsterdam, Netherlands
-    role: Cloud Engineer
-    skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
-    started: 2018-10
-    type: Freelance
-
-  - client: Zetes People ID
-    ended: 2024-10
-    icon: /images/zetes-people-id.png
     location: Brussels, Belgium
     role: DevOps Engineer
     skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
-    started: 2024-03
-    type: Freelance
+    started: 2018-10
+    type: Full Time
+
+  - client: Argenta
+    ended: 2017-06
+    icon: argenta
+    location: Antwerp, Belgium
+    role: Cloud Engineer
+    skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
+    started: 2016-12
+    type: Full Time
 
 certificates:
   - icon: aws
