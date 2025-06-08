@@ -146,19 +146,23 @@
                     <div class="resume-experience-timeline"></div>
                     <ul class="resume-experience-list">
                         {{- range .Site.Data.resume.experience }}
-                            <li class="resume-experience-item">
-                                <div>
-                                    <div class="resume-experience-anchor">{{ partial "resume/custom_svg.html" "circle" }}</div>
-                                    <h3>{{ .client }} · {{ .role }}</h3>
-                                    <h4>{{ partial "resume/period_format.html" . }} · {{ .type }}<br>{{ .location }}</h4>
-                                    <p>
-                                        {{ .description }}
-                                    </p>
-                                    <p>
-                                        {{ .skills }}
-                                    </p>
-                                </div>
-                            </li>
+                            {{ if .highlighted }}
+                                <li class="resume-experience-item">
+                                    {{ partial "resume/custom_svg.html" .icon }}
+                                    <div>
+                                        <div class="resume-experience-anchor">{{ partial "resume/custom_svg.html" "circle" }}</div>
+                                        <h3>{{ .client }} · {{ .role }}</h3>
+                                        <h4>{{ partial "resume/period_format.html" . }} · {{ .type }}<br>{{ .location }}
+                                        </h4>
+                                        <p>
+                                            {{ .description }}
+                                        </p>
+                                        <p>
+                                            {{ .skills }}
+                                        </p>
+                                    </div>
+                                </li>
+                            {{ end }}
                         {{- end }}
                     </ul>
                 </div>

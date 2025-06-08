@@ -91,6 +91,7 @@ h4 {
 }
 
 li {
+    align-items: center;
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -132,14 +133,15 @@ ul {
 }
 
 .resume-contact-item {
-    svg {
-        width: 16px;
-    }
 
     span {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    svg {
+        width: 16px;
     }
 }
 
@@ -197,6 +199,13 @@ ul {
     }
 }
 
+
+.resume-experience-item {
+    > svg {
+        flex-shrink: 0;
+        width: 20px;
+    }
+}
 .resume-experience-container {
     display: grid;
     grid-template-columns: auto 1fr;
