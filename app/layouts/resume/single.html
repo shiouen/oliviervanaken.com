@@ -148,19 +148,32 @@
                         {{- range .Site.Data.resume.experience }}
                             {{ if .highlighted }}
                                 <li class="resume-experience-item">
-                                    {{ partial "resume/custom_svg.html" .icon }}
+                                    <div class="resume-experience-anchor">{{ partial "resume/custom_svg.html" "circle" }}</div>
+
+                                    <div class="resume-experience-icon">
+                                        {{ partial "resume/custom_svg.html" .icon }}
+                                    </div>
+
+                                    <h3>{{ .client }} · {{ .role }}</h3>
+
+                                    <span></span>
+
+                                    <h4>
+                                        {{ partial "resume/period_format.html" . }} · {{ .type }}<br>{{ .location }}
+                                    </h4>
+
+                                    <span></span>
+
                                     <div>
-                                        <div class="resume-experience-anchor">{{ partial "resume/custom_svg.html" "circle" }}</div>
-                                        <h3>{{ .client }} · {{ .role }}</h3>
-                                        <h4>{{ partial "resume/period_format.html" . }} · {{ .type }}<br>{{ .location }}
-                                        </h4>
                                         <p>
                                             {{ .description }}
                                         </p>
                                         <p>
+
                                             {{ .skills }}
                                         </p>
                                     </div>
+
                                 </li>
                             {{ end }}
                         {{- end }}

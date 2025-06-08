@@ -187,29 +187,38 @@ ul {
 }
 
 .resume-experience-anchor {
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-26.5px, 4px);
 
     svg {
         height: 12px;
-        left: 0;
-        position: absolute;
         width: 12px;
-        top: 0;
-        transform: translate(-31.5px, 6px);
     }
 }
 
+.resume-experience-icon {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 24px;
+    justify-content: center;
+    margin-right: 15px;
+    width: 24px;
+}
 
 .resume-experience-item {
-    > svg {
-        flex-shrink: 0;
-        width: 20px;
-    }
+    display: grid;
+    gap: 0;
+    grid-template-columns: auto 1fr;
+    position: relative;
 }
+
 .resume-experience-container {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 25px;
+    gap: 20px;
 }
 
 .resume-experience-timeline {
