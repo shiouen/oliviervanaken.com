@@ -44,6 +44,7 @@ skills:
 experience:
   - client: Zetes People ID
     ended: 2024-10
+    highlighted: true
     icon: zetes
     location: Brussels, Belgium
     role: DevOps Engineer
@@ -53,6 +54,7 @@ experience:
 
   - client: Telenet
     ended: 2024-12
+    highlighted: false
     icon: telenet
     location: Brussels, Belgium
     role: DevOps Engineer
@@ -62,6 +64,7 @@ experience:
 
   - client: Moobii
     ended: 2021-06
+    highlighted: false
     icon: moobii
     location: Brussels, Belgium
     role: Full Stack Engineer
@@ -71,6 +74,7 @@ experience:
 
   - client: Nike
     ended: 2024-02
+    highlighted: true
     icon: nike
     location: Antwerp, Belgium
     role: DevOps Engineer
@@ -80,6 +84,7 @@ experience:
 
   - client: Barclays
     ended: 2019-11
+    highlighted: true
     icon: barclays
     location: Manchester, UK
     role: Cloud Engineer
@@ -89,6 +94,7 @@ experience:
 
   - client: ABN Amro Bank
     ended: 2019-08
+    highlighted: true
     icon: abnamro
     location: Brussels, Belgium
     role: DevOps Engineer
@@ -98,6 +104,7 @@ experience:
 
   - client: Argenta
     ended: 2017-06
+    highlighted: true
     icon: argenta
     location: Antwerp, Belgium
     role: Full Stack Engineer
