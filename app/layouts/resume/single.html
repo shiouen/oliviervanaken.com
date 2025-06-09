@@ -158,15 +158,17 @@
 
                                     <span></span>
 
-                                    <h4>
-                                        {{ partial "resume/period_format.html" . }} · {{ .type }}<br>{{ .location }}
-                                    </h4>
+                                    <div class="resume-experience-description">
+                                        <h4>
+                                            {{ partial "resume/period_format.html" . }} · {{ .type }}<br>{{ .location }}
+                                        </h4>
 
-                                    <span></span>
-
-                                    <div>
-                                        <p>{{ .description }}</p>
-                                        <p>{{ .skills }}</p>
+                                        <p>{{ .short }}</p>
+                                        <div class="resume-experience-skills">
+                                            {{ range .skills }}
+                                                <p class="resume-experience-skill">{{ . }}</p>
+                                            {{ end }}
+                                        </div>
                                     </div>
                                 </li>
                             {{ end }}
