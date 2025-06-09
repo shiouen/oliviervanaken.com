@@ -89,7 +89,7 @@ experience:
     location: Manchester, UK
     role: Cloud Engineer
     skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
-    started: 2019-09
+    started: 2019-08
     type: Consultant
 
   - client: ABN Amro Bank
@@ -97,9 +97,19 @@ experience:
     highlighted: true
     icon: abnamro
     location: Brussels, Belgium
-    role: DevOps Engineer
+    role: Full Stack & DevOps Engineer
     skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
     started: 2017-09
+    type: Consultant
+
+  - client: Puratos
+    ended: 2017-09
+    highlighted: false
+    icon: argenta
+    location: Antwerp, Belgium
+    role: Web Developer
+    skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
+    started: 2017-08
     type: Consultant
 
   - client: Argenta
@@ -111,6 +121,36 @@ experience:
     skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
     started: 2016-12
     type: Consultant
+
+  - client: FLAVR
+    ended: 2016-06
+    highlighted: false
+    icon: flavr
+    location: Antwerp, Belgium
+    role: Full Stack Developer
+    skills: [ AWS, MongoDB, API, HTML, Node.js, Angular, SASS ]
+    started: 2016-06
+    type: Freelance
+
+  - client: GET Time & Security
+    ended: 2012-07
+    highlighted: false
+    icon: primion
+    location: Antwerp, Belgium
+    role: Developer
+    skills: [ Ruby, Python ]
+    started: 2012-07
+    type: Internship
+
+  - client: BMW Centrauto
+    ended: 2011-07
+    highlighted: false
+    icon: bmw
+    location: Antwerp, Belgium
+    role: Developer
+    skills: [ Bash ]
+    started: 2011-06
+    type: Internship
 
 certificates:
   - icon: aws
