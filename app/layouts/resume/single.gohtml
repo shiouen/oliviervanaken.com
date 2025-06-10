@@ -50,10 +50,10 @@
                                 <p>{{ .name }}</p>
                                 <div class="resume-skill-rating">
                                     {{- range seq .rating }}
-                                        <div class="resume-skill-bar">{{ partial "resume/custom_svg.html" "round_rect" }}</div>
+                                        <div class="resume-skill-bar">{{ partial "resume/custom_svg.gohtml" "round_rect" }}</div>
                                     {{- end }}
                                     {{ range seq (sub 5 .rating) }}
-                                        <div class="resume-skill-bar resume-skill-bar--light">{{ partial "resume/custom_svg.html" "round_rect" }}</div>
+                                        <div class="resume-skill-bar resume-skill-bar--light">{{ partial "resume/custom_svg.gohtml" "round_rect" }}</div>
                                     {{ end }}
                                 </div>
                             </li>
@@ -72,7 +72,7 @@
                     <ul class="resume-certificate-list">
                         {{- range .Site.Data.resume.certificates }}
                             <li class="resume-certificate-item">
-                                {{ partial "resume/custom_svg.html" .icon }}
+                                {{ partial "resume/custom_svg.gohtml" .icon }}
                                 <div>
                                     <p>{{ .name }}</p>
                                     <p class="resume-certificate-issuer">{{ .issuer }}</p>
@@ -111,7 +111,7 @@
                     <ul class="resume-education-list">
                         {{- range .Site.Data.resume.education }}
                             <li class="resume-education-item resume-education-item--{{ .icon }}">
-                                {{ partial "resume/custom_svg.html" .icon }}
+                                {{ partial "resume/custom_svg.gohtml" .icon }}
                                 <div>
                                     <p class="resume-education-issuer">{{ .issuer }}</p>
                                     <p class="resume-education-degree">{{ .degree }}</p>

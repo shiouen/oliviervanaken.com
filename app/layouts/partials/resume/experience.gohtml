@@ -18,10 +18,10 @@
             {{ range $experience }}
                 {{ if or (not $highlights) (and $highlights .highlighted) }}
                     <li class="resume-experience-item">
-                        <div class="resume-experience-anchor">{{ partial "resume/custom_svg.html" "circle" }}</div>
+                        <div class="resume-experience-anchor">{{ partial "resume/custom_svg.gohtml" "circle" }}</div>
 
                         <div class="resume-experience-icon">
-                            {{ partial "resume/custom_svg.html" .icon }}
+                            {{ partial "resume/custom_svg.gohtml" .icon }}
                         </div>
 
                         <h3>{{ .client }} · {{ .role }}</h3>
@@ -30,7 +30,7 @@
 
                         <div class="resume-experience-description">
                             <h4>
-                                {{ partial "resume/period_format.html" . }} · {{ .type }}<br>{{ .location }}
+                                {{ partial "resume/period_format.gohtml" . }} · {{ .type }}<br>{{ .location }}
                             </h4>
 
                             <p>{{ .description }}</p>
