@@ -212,6 +212,16 @@ ul {
     justify-content: space-between;
 }
 
+.resume-experience-detail {
+    display: list-item;
+}
+
+.resume-experience-details {
+    gap: 0;
+    list-style: disc outside;
+    padding-left: 20px;
+}
+
 .resume-experience-icon {
     display: flex;
     flex-direction: column;
@@ -234,8 +244,9 @@ ul {
 }
 
 .resume-experience-skill {
-    border: 1px solid black;
+    border: 1px solid #384257;
     border-radius: 3px;
+    color: #384257;
     display: inline-block;
     padding: 1px 5px;
 }

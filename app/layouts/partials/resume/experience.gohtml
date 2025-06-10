@@ -36,7 +36,11 @@
                             <p>{{ .description }}</p>
 
                             {{ if not $highlights }}
-                                <p>{{ .details }}</p>
+                                <ul class="resume-experience-details">
+                                    {{ range .details }}
+                                        <li class="resume-experience-detail"><span>{{ . }}</span></li>
+                                    {{ end }}
+                                </ul>
                             {{ end }}
 
                             <div class="resume-experience-skills">
