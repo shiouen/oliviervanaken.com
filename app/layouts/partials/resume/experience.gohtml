@@ -1,0 +1,53 @@
+{{ $experience := .experience }}
+{{ $highlights := .highlights }}
+
+<div class="resume-experience">
+    <div class="resume-content-header">
+        <h2>
+            {{ if $highlights }}
+                Highlighted
+            {{ end }}
+            Experience
+        </h2>
+        <div class="resume-separator"></div>
+    </div>
+
+    <div class="resume-content-container resume-experience-container">
+        <div class="resume-experience-timeline"></div>
+        <ul class="resume-experience-list">
+            {{ range $experience }}
+                {{ if or (not $highlights) (and $highlights .highlighted) }}
+                    <li class="resume-experience-item">
+                        <div class="resume-experience-anchor">{{ partial "resume/custom_svg.html" "circle" }}</div>
+
+                        <div class="resume-experience-icon">
+                            {{ partial "resume/custom_svg.html" .icon }}
+                        </div>
+
+                        <h3>{{ .client }} · {{ .role }}</h3>
+
+                        <span></span>
+
+                        <div class="resume-experience-description">
+                            <h4>
+                                {{ partial "resume/period_format.html" . }} · {{ .type }}<br>{{ .location }}
+                            </h4>
+
+                            <p>{{ .description }}</p>
+
+                            {{ if not $highlights }}
+                                <p>{{ .details }}</p>
+                            {{ end }}
+
+                            <div class="resume-experience-skills">
+                                {{ range .skills }}
+                                    <p class="resume-experience-skill">{{ . }}</p>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+</div>
