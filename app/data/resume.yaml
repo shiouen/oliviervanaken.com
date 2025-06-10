@@ -43,12 +43,13 @@ skills:
 # experience
 experience:
   - client: Zetes People ID
+    description: >
+      This is just a short descir[tppokd djdi doisfcsdmk  oio ijfoj ojo af ka kja adfjaisjcn  ouad oajosdd kjna jd
     ended: 2024-10
     highlighted: true
     icon: zetes
     location: Brussels, Belgium
     role: DevOps Engineer
-    short: this is just a short descir[tppokd djdi doisfcsdmk  oio ijfoj ojo af ka kja a
     skills: [ AWS, Docker, Terraform, Automation, Python, Amazon ECS, Java, Jenkins, mTLS ]
     started: 2024-03
     type: Freelance
@@ -124,12 +125,19 @@ experience:
     type: Consultant (Capgemini)
 
   - client: FLAVR
+    description: Startup environment where flexibility and strict deadlines are key.
+    details:
+      - created new frontend components in AngularJS/SASS/HTML (MEAN stack)
+      - created new backend components in Node.js/Express/MongoDB (MEAN stack)
+      - created responsive e-mail templates for the marketing strategy in MJML and put devops processes in place for version control and quality assessment
+      - maintain AWS EC2 instance environments
+      - support role for production
     ended: 2016-06
     highlighted: false
     icon: flavr
     location: Antwerp, Belgium
     role: Full Stack Developer
-    skills: [ AWS, MongoDB, API, HTML, Node.js, Angular, SCSS ]
+    skills: [ AWS, MongoDB, API, HTML, Node.js, Angular, SCSS, MJML ]
     started: 2016-06
     type: Freelance
 
