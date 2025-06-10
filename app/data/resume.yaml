@@ -85,6 +85,16 @@ experience:
     type: Freelance
 
   - client: Barclays
+    description:
+    details:
+      - worked together with a team of a brand new iOS application within the client's transformational business unit, closely working together with the platform team to make sure the application team can do their work for the backend of a brand new iOS application; the application and platform grew side by side
+      - conceptualized application and platform solutions together with the Solution Architect of the platform team
+      - built architecture documents and diagrams for the application backend
+      - indicated and highlighted priorities the application team required of the platform team; which AWS services and existing AWS infra (e.g. networking, pipelines, permissions) were required for the application team to do their work on the platform
+      - reiterated with the team to make sure the architecture concept for the backend fulfill the requirements
+      - "implemented first phases of the application backend with ApiGateway, Lambda (Golang) and SAM; other services involved: S3, Route53, DynamoDB, Cognito, IAM, EC2, ECS, CloudFront, VPC, WAF and deployments were done with CloudFormation and SAM"
+      - put DevOps processes into place to build, test and deploy the serverless backend application with the click of a button
+      - interviewed DevOps profiles to fill positions within the application and platform teams
     ended: 2019-11
     highlighted: true
     icon: barclays
@@ -95,6 +105,27 @@ experience:
     type: Consultant (Capgemini)
 
   - client: ABN Amro Bank
+    description: >
+      Started as member of the team which maintained the frontend foundation and gradually took
+      the position of cloud consultant during a considerably large cloud migration
+      in a tightly regulated financial environment.
+
+    details:
+      - maintained the frontend foundation in an agile environment
+      - developed frontend development tooling in Node.js for 50 teams of frontend developers
+      - reduced the frontend pipeline's duration from 1.5 hours to 10 minutes (95% reduction), by migrating protractor testing from Jenkins to AWS Lambda
+      - developed frontend performance monitoring tool using AWS EC2, ECS, Batch and Lambda
+      - developed frontend components in AngularJS/SASS/HTML
+      - led 4 teams in migrating their backend services to AWS
+      - led 1 team in launching their greenfield API project on AWS
+      - coached and trained 40 colleagues to ready them for the maintenance of their applications on AWS
+      - built architecture documents and made propositions to be validated by multiple boards of the client, e.g. board of architects, monitoring, CI/CD
+      - carried processes for approvals and assessments
+      - assisted the teams with planning their cloud user stories
+      - implemented proposed containerised services with ECS clusters, RDS, S3, Route53 and VPC
+      - implemented proposed serverless APIs with ApiGateway, Lambda and DynamoDB
+      - implemented pipelines for the applications using Bitbucket, CodePipeline, CodeBuild
+      - collaborated  with the AWS engineers at payment start-up Tikkie, sharing knowledge and practices
     ended: 2019-08
     highlighted: true
     icon: abnamro
@@ -105,7 +136,7 @@ experience:
     type: Consultant (Capgemini)
 
   - client: Puratos
-    description: Filled in on a short-term two-month project to maintain delivery continuity.
+    description: Filled in on a project to maintain delivery continuity.
     details:
       - developed components in AngularJS/SASS/HTML (Jekyll) for the frontend
       - refactored legacy components in AngularJS/SASS/HTML (Jekyll) for the frontend
