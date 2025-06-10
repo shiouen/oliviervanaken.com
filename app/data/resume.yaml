@@ -105,6 +105,10 @@ experience:
     type: Consultant (Capgemini)
 
   - client: Puratos
+    description: Filled in on a short-term two-month project to maintain delivery continuity.
+    details:
+      - developed components in AngularJS/SASS/HTML (Jekyll) for the frontend
+      - refactored legacy components in AngularJS/SASS/HTML (Jekyll) for the frontend
     ended: 2017-09
     highlighted: false
     icon: puratos
@@ -115,12 +119,15 @@ experience:
     type: Consultant (Capgemini)
 
   - client: Argenta
-    description: Part of the team responsible for the client's internet banking web application, which serves thousands of customers daily in a tightly regulated financial environment.
+    description: >
+      Part of the team responsible for the client's internet banking web application, which serves thousands of
+      customers daily in a tightly regulated financial environment.
     details:
       - developed AngularJS/LESS/HTML components for the frontend
       - developed Java Spring/Camel API components for the backend
       - responsible for quality control and made sure unit testing coverage was up to standards
       - developed entire user stories in an agile scrum environment
+      - lead the migration to Java/Groovy configuration as code for Jenkins CI/CD pipelines
       - monitor production on-premise services and databases
       - on-call support role for production
     ended: 2017-06
@@ -141,7 +148,7 @@ experience:
       - maintained AWS EC2 environments with basic scaling and load balancing
       - on-call support role for production
     ended: 2016-08
-    highlighted: true
+    highlighted: false
     icon: flavr
     location: Antwerp, Belgium
     role: Full Stack Developer
