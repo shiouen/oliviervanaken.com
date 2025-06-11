@@ -69,8 +69,8 @@ experience:
     highlighted: false
     icon: moobii
     location: Brussels, Belgium
-    role: Full Stack Engineer
-    skills: [ .NET, C#, API, mTLS, Microsoft Azure, SOAP, HTTP ]
+    role: Full Stack & Cloud Engineer
+    skills: [ Azure, .NET, C#, API, mTLS, SOAP, HTTP ]
     started: 2021-05
     type: Freelance
 
@@ -85,15 +85,17 @@ experience:
     type: Freelance
 
   - client: Barclays
-    description:
+    description: >
+      Part of an iOS app team in a transformational business unit where new technologies are adopted faster compared to
+      other units in a tightly regulated financial environment. Close collaboration with the platform
+      engineering team to ensure the app team can do their work for the backend of its brand new iOS application.
     details:
-      - worked together with a team of a brand new iOS application within the client's transformational business unit, closely working together with the platform team to make sure the application team can do their work for the backend of a brand new iOS application; the application and platform grew side by side
       - conceptualized application and platform solutions together with the Solution Architect of the platform team
-      - built architecture documents and diagrams for the application backend
-      - indicated and highlighted priorities the application team required of the platform team; which AWS services and existing AWS infra (e.g. networking, pipelines, permissions) were required for the application team to do their work on the platform
+      - created architecture documents and diagrams for the application backend
+      - indicated and highlighted the application team's priorities for the platform team; which AWS services and existing AWS infra (e.g. networking, pipelines, permissions) were required for the application team to do their work on the platform
       - reiterated with the team to make sure the architecture concept for the backend fulfill the requirements
       - "implemented first phases of the application backend with ApiGateway, Lambda (Golang) and SAM; other services involved: S3, Route53, DynamoDB, Cognito, IAM, EC2, ECS, CloudFront, VPC, WAF and deployments were done with CloudFormation and SAM"
-      - put DevOps processes into place to build, test and deploy the serverless backend application with the click of a button
+      - created CI/CD pipelines to build, test and deploy the serverless backend application with the click of a button
       - interviewed DevOps profiles to fill positions within the application and platform teams
     ended: 2019-11
     highlighted: true
@@ -109,7 +111,6 @@ experience:
       Started as member of the team which maintained the frontend foundation and gradually took
       the position of cloud consultant during a considerably large cloud migration
       in a tightly regulated financial environment.
-
     details:
       - maintained the frontend foundation in an agile environment
       - developed frontend development tooling in Node.js for 50 teams of frontend developers
