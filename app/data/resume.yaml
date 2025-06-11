@@ -65,16 +65,31 @@ experience:
     type: Freelance
 
   - client: Moobii
+    description: >
+      One-man project to build a .NET API backend which integrates with the Belgian government's eHealth patient
+      platform and is used daily by over 20 Belgian healthcare institutions for all their patients.
+    details:
+      - architected and implemented a .NET REST API backend in C#
+      - maintained Azure environment and compute instances using Azure App Service and Terraform
+      - set up git repositories and deployment pipelines for the backend in Azure DevOps
+      - implemented JSON Web token encryption and signing in C# to authenticate with the eHealth services
+      - set up the certificates used for encryption and signing using Azure Key Vault and Terraform
+      - set up secrets used for encryption and signing using Azure Key Vault and Terraform
+      - wrapped the government VESTA SOAP API with a .NET REST API in C#
     ended: 2021-06
     highlighted: false
     icon: moobii
     location: Brussels, Belgium
     role: Full Stack & Cloud Engineer
-    skills: [ Azure, .NET, C#, API, mTLS, SOAP, HTTP ]
+    skills: [ Azure, .NET, C#, API, Encryption, mTLS, SOAP, HTTP ]
     started: 2021-05
     type: Freelance
 
   - client: Nike
+    description: >
+      docjmdocmsk
+    details:
+
     ended: 2024-02
     highlighted: true
     icon: nike
