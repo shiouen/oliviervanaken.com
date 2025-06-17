@@ -41,10 +41,6 @@ skills:
     rating: 4
   - name: Golang
     rating: 4
-  - name: Backend
-    rating: 4
-  - name: Frontend
-    rating: 3
   - name: Azure
     rating: 3
 
@@ -73,7 +69,7 @@ experience:
       - implemented account budgets and alerts as part of AWS account creation
       - implemented Jenkins CI/CD pipeline and a CLI to deploy different projects and components separately or all together
       - implemented library of 20 reusable Terraform modules
-      - implemented a modular approach which enabled the overseas client to plug and play the Terraform projects with their own existing resources deployed with AWS CloudFormation
+      - implemented modular Terraform projects which enabled the overseas client to plug and play the Terraform projects with their own existing resources deployed with AWS CloudFormation
       - managed 10 different deployment environments for both parties
       - reduced AWS account costs by 70% with VPC optimizations
       - close collaboration with overseas Japanese development teams
@@ -82,7 +78,7 @@ experience:
     icon: zetes
     location: Brussels, Belgium
     role: DevOps Engineer
-    skills: [ AWS, Containers, Terraform, Automation, Account Management, Cloud Migration, Zero to Hero, CI/CD, Python, Java, Jenkins, mTLS ]
+    skills: [ AWS, Containers, Terraform, Automation, Account Management, Cloud Migration, CI/CD, Python, Jenkins, Java, Signing, mTLS ]
     started: 2024-03
     type: Freelance
 
@@ -266,25 +262,25 @@ experience:
     started: 2016-06
     type: Freelance
 
-  - client: GET Time & Security
-    ended: 2012-07
-    highlighted: false
-    icon: primion
-    location: Antwerp, Belgium
-    role: Developer
-    skills: [ Ruby, Python ]
-    started: 2012-07
-    type: Internship
-
-  - client: BMW Centrauto
-    ended: 2011-07
-    highlighted: false
-    icon: bmw
-    location: Antwerp, Belgium
-    role: Developer
-    skills: [ Bash ]
-    started: 2011-06
-    type: Internship
+#  - client: GET Time & Security
+#    ended: 2012-07
+#    highlighted: false
+#    icon: primion
+#    location: Antwerp, Belgium
+#    role: Developer
+#    skills: [ Ruby, Python ]
+#    started: 2012-07
+#    type: Internship
+#
+#  - client: BMW Centrauto
+#    ended: 2011-07
+#    highlighted: false
+#    icon: bmw
+#    location: Antwerp, Belgium
+#    role: Developer
+#    skills: [ Bash ]
+#    started: 2011-06
+#    type: Internship
 
 certificates:
   - icon: aws

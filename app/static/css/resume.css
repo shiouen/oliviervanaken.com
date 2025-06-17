@@ -325,3 +325,7 @@ ul {
     color: #A8B8DA;
 
 }
+
+.resume-skills-list {
+    gap: 7px;
+}
