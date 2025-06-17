@@ -27,40 +27,82 @@ objective: >
 
 # skills
 skills:
-  - name: Python
-    rating: 5
-  - name: Golang
-    rating: 4
-  - name: JavaScript
-    rating: 4
-  - name: Docker
-    rating: 5
   - name: AWS
     rating: 5
-  - name: Automation
+  - name: CI/CD
     rating: 5
+  - name: Terraform
+    rating: 5
+  - name: Containers
+    rating: 5
+  - name: Kubernetes
+    rating: 4
+  - name: Python
+    rating: 4
+  - name: Golang
+    rating: 4
+  - name: Backend
+    rating: 4
+  - name: Frontend
+    rating: 3
+  - name: Azure
+    rating: 3
 
 # experience
 experience:
   - client: Zetes People ID
     description: >
-      This is just a short descir[tppokd djdi doisfcsdmk  oio ijfoj ojo af ka kja adfjaisjcn  ouad oajosdd kjna jd
+      Part of a Java API team specialized in signing and encryption for government identification systems in a business
+      unit with nearly zero AWS experience, which had to migrate APIs from on-premise Kubernetes to AWS ECS,
+      while navigating rapidly changing requirements, deadlines and formalities of a Japanese client.
+    details:
+      - the code base counts 20 Terraform projects
+      - designed and implemented a strictly private multi-VPC AWS network with VPC peering using Terraform
+      - implemented private AWS service connections with VPC endpoints using Terraform
+      - implemented AWS ECS Fargate services, tasks and container definitions with logging using Terraform
+      - implemented autoscaling, network load balancers and application load balancers using Terraform
+      - configured RDS Aurora databases using terraform and implemented database migration side car containers for the services
+      - implemented around 50 IAM roles using Terraform
+      - implemented variable management with SSM parameters and SM secrets using Terraform
+      - implemented mTLS certificate creation and management using Terraform
+      - designed and implemented AWS account and organization structure using Terraform
+      - automated AWS account creation using Terraform and Python
+      - implemented Terraform state management in AWS S3 as part of AWS account creation
+      - implemented IAM Identity Center integrations with Azure Entra ID as part of AWS account creation
+      - implemented on-premise Jenkins CI/CD pipeline access with AWS IAM Roles Anywhere as part of AWS account creation
+      - implemented account budgets and alerts as part of AWS account creation
+      - implemented Jenkins CI/CD pipeline and a CLI to deploy different projects and components separately or all together
+      - implemented library of 20 reusable Terraform modules
+      - implemented a modular approach which enabled the overseas client to plug and play the Terraform projects with their own existing resources deployed with AWS CloudFormation
+      - managed 10 different deployment environments for both parties
+      - reduced AWS account costs by 70% with VPC optimizations
+      - close collaboration with overseas Japanese development teams
     ended: 2024-10
     highlighted: true
     icon: zetes
     location: Brussels, Belgium
     role: DevOps Engineer
-    skills: [ AWS, Docker, Terraform, Automation, Python, Amazon ECS, Java, Jenkins, mTLS ]
+    skills: [ AWS, Containers, Terraform, Automation, Account Management, Cloud Migration, Zero to Hero, CI/CD, Python, Java, Jenkins, mTLS ]
     started: 2024-03
     type: Freelance
 
   - client: Telenet
+    description: >
+      Filled in on a project to maintain delivery continuity while part of a team providing an in-house API development
+      platform, which has the intention of migrating internal legacy applications to a cloud based platform with a
+      uniform logic and design.
+    details:
+      - set up a brand new new staging environment using Terraform and GitLab CI/CD pipelines which deployed containerized AWS lambdas running Python backends
+      - documented the process of setting up the new Staging environment, unexpected errors and findings in contrast to the existing Development environment documentation
+      - shared know-how on the inner workings and behaviors of specific AWS Lambda configurations
+      - implemented AWS tagging policies
+      - reviewed current infrastructure and CI/CD pipelines, documented issues found on Jira as improvement stories
     ended: 2024-12
     highlighted: false
     icon: telenet
     location: Brussels, Belgium
     role: DevOps Engineer
-    skills: [ AWS, Gitlab, Docker, Terraform, Automation, Python, Serverless ]
+    skills: [ AWS, Gitlab, Containers, Terraform, Automation, CI/CD, Python, Serverless ]
     started: 2024-10
     type: Freelance
 
@@ -74,7 +116,7 @@ experience:
       - set up git repositories and deployment pipelines for the backend in Azure DevOps
       - implemented JSON Web token encryption and signing in C# to authenticate with the eHealth services
       - set up the certificates used for encryption and signing using Azure Key Vault and Terraform
-      - set up secrets used for encryption and signing using Azure Key Vault and Terraform
+      - set up the secrets used for encryption and signing using Azure Key Vault and Terraform
       - wrapped the government VESTA SOAP API with a .NET REST API in C#
     ended: 2021-06
     highlighted: false
@@ -87,23 +129,44 @@ experience:
 
   - client: Nike
     description: >
-      docjmdocmsk
+      Maintained the DevOps and Kubernetes foundation of Nike Europe together with 50 DevOps colleagues
+      in an agile environment while being part of a Data Engineering team within a Data & Analytics business unit.
     details:
-
+    - effectively increased the SLA performance and automated a support team's efforts with a nightly
+      monitoring application for automated detection, reporting and restarting of failed ETL jobs; these jobs
+      move data used in daily reports which are critical for distribution centre decision making and prevent the
+      business from running their distribution centres blindly; Python, Jenkins, Docker, MSSQL
+    - automated version and release management with a CLI tool written in Golang; it enables teams to
+      manage git versions in uniform fashion; Golang, Docker, Homebrew, Jenkins, Groovy
+    - multitude of Kubernetes cluster migrations between old and new AWS platforms, all the way up to
+      production; Kubernetes, EKS, Apache Airflow, Python, Jenkins, Terraform
+    - set up brand new Kubernetes environments on AWS for several teams; Kubernetes, EKS, Terraform,
+      Python, Jenkins
+    - administrated development and reviewing processes; GitHub
+    - lead and architected the teams' automation, quality control and operations; GitHub, Jenkins, Python
+    - interviewed software engineering profiles to fill positions within the application and platform teams
+    - architected and built an automated end-to-end testing pipeline which tests ETL flows across multiple
+      teams on Databricks; it checks whether all the teams' data workflows are working together as expected;
+      Databricks, Jenkins, Python
+    - automated AWS S3 syncs across multiple AWS accounts
+    - architected and implemented a solution for a manual time management business process; the
+      business migrated to a new badging and time tracking tool, for which they wanted no manual review
+      and editing process of invalid time entries; the solution syncs Box into AWS S3, from where AWS
+      Lambda picked up the files and filtered invalid time entries; AWS Lambda, Python, Box, cronjobs, AWS
+      S3
     ended: 2024-02
     highlighted: true
     icon: nike
     location: Antwerp, Belgium
     role: DevOps Engineer
-    skills: [ AWS, Docker, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
+    skills: [ AWS, Containers, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
     started: 2020-08
     type: Freelance
 
   - client: Barclays
     description: >
       Part of an iOS app team in a transformational business unit where new technologies are adopted faster compared to
-      other units in a tightly regulated financial environment. Close collaboration with the platform
-      engineering team to ensure the app team can do their work for the backend of its brand new iOS application.
+      other units in a tightly regulated financial environment.
     details:
       - conceptualized application and platform solutions together with the Solution Architect of the platform team
       - created architecture documents and diagrams for the application backend
@@ -129,7 +192,7 @@ experience:
     details:
       - maintained the frontend foundation in an agile environment
       - developed frontend development tooling in Node.js for 50 teams of frontend developers
-      - reduced the frontend pipeline's duration from 1.5 hours to 10 minutes (95% reduction), by migrating protractor testing from Jenkins to AWS Lambda
+      - reduced the frontend pipeline's duration from 1.5 hours to 10 minutes, or a 95% reduction, by migrating protractor testing from Jenkins to AWS Lambda
       - developed frontend performance monitoring tool using AWS EC2, ECS, Batch and Lambda
       - developed frontend components in AngularJS/SASS/HTML
       - led 4 teams in migrating their backend services to AWS
@@ -147,7 +210,7 @@ experience:
     icon: abnamro
     location: Amsterdam, Netherlands
     role: Full Stack & Cloud Engineer
-    skills: [ AWS, Coaching, Groovy, Docker, Node.js, Jenkins, Cloud Migration, JavaScript, Angular, SCSS ]
+    skills: [ AWS, Coaching, Groovy, Containers, Node.js, Jenkins, Cloud Migration, JavaScript, Angular, SCSS ]
     started: 2017-09
     type: Consultant (Capgemini)
 
@@ -178,7 +241,7 @@ experience:
       - monitor production on-premise services and databases
       - on-call support role for production
     ended: 2017-06
-    highlighted: true
+    highlighted: false
     icon: argenta
     location: Antwerp, Belgium
     role: Full Stack Engineer
