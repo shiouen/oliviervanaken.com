@@ -89,9 +89,9 @@ experience:
       platform, which has the intention of migrating internal legacy applications to a cloud based platform with a
       uniform logic and design.
     details:
-      - set up a brand new new staging environment using Terraform and GitLab CI/CD pipelines which deployed containerized AWS lambdas running Python backends
-      - documented the process of setting up the new Staging environment, unexpected errors and findings in contrast to the existing Development environment documentation
-      - shared know-how on the inner workings and behaviors of specific AWS Lambda configurations
+      - deployed a new environment with containerized AWS lambdas using Terraform and GitLab CI/CD pipelines
+      - documented the deployment process of the new environment, filling the gaps of the existing environment documentation
+      - shared know-how about the inner workings of specific AWS Lambda configurations
       - implemented AWS tagging policies
       - reviewed current infrastructure and CI/CD pipelines, documented issues found on Jira as improvement stories
     ended: 2024-12
@@ -108,9 +108,9 @@ experience:
       One-man project to build a .NET API backend which integrates with the Belgian government's eHealth patient
       platform and is used daily by over 20 Belgian healthcare institutions for all their patients.
     details:
-      - architected and implemented a .NET REST API backend in C#
+      - designed and implemented a .NET REST API backend in C#
       - maintained Azure environment and compute instances using Azure App Service and Terraform
-      - set up git repositories and deployment pipelines for the backend in Azure DevOps
+      - set up git repositories and deployment pipelines in Azure DevOps
       - implemented JSON Web token encryption and signing in C# to authenticate with the eHealth services
       - set up the certificates used for encryption and signing using Azure Key Vault and Terraform
       - set up the secrets used for encryption and signing using Azure Key Vault and Terraform
@@ -165,12 +165,12 @@ experience:
       Part of an iOS app team in a transformational business unit where new technologies are adopted faster compared to
       other units in a tightly regulated financial environment.
     details:
-      - conceptualized application and platform solutions together with the Solution Architect of the platform team
-      - created architecture documents and diagrams for the application backend
-      - indicated and highlighted the application team's priorities for the platform team; which AWS services and existing AWS infra (e.g. networking, pipelines, permissions) were required for the application team to do their work on the platform
-      - reiterated with the team to make sure the architecture concept for the backend fulfill the requirements
-      - "implemented first phases of the application backend with ApiGateway, Lambda (Golang) and SAM; other services involved: S3, Route53, DynamoDB, Cognito, IAM, EC2, ECS, CloudFront, VPC, WAF and deployments were done with CloudFormation and SAM"
-      - created CI/CD pipelines to build, test and deploy the serverless backend application with the click of a button
+      - designed application and platform solution diagrams together with the Solution Architect of the platform team
+      - communicated the application team's AWS service requirements for networking, security, pipelines and permissions to the platform team
+      - implemented application backend infrastructure with AWS CloudFront, ApiGateway, Lambda (Golang) using SAM and CloudFormation
+      - created CI/CD pipelines to build, test and deploy the serverless backend application using AWS CodePipeline, CodeBuild and CloudFormation
+      - implemented dozens of IAM roles
+      - supported the platform team with their account infrastructure using AWS S3, Route53, DynamoDB, Cognito, EC2, ECS, VPC and WAF
       - interviewed DevOps profiles to fill positions within the application and platform teams
     ended: 2019-11
     highlighted: true
@@ -190,7 +190,7 @@ experience:
       - maintained the frontend foundation in an agile environment
       - developed frontend development tooling in Node.js for 50 teams of frontend developers
       - reduced the frontend pipeline's duration from 1.5 hours to 10 minutes, or a 95% reduction, by migrating protractor testing from Jenkins to AWS Lambda
-      - developed frontend performance monitoring tool using AWS EC2, ECS, Batch and Lambda
+      - developed frontend performance monitoring tooling using AWS EC2, ECS, Batch and Lambda
       - developed frontend components in AngularJS/SASS/HTML
       - led 4 teams in migrating their backend services to AWS
       - led 1 team in launching their greenfield API project on AWS
