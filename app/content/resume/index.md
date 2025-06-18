@@ -1,4 +1,4 @@
 ---
 title: "Resume"
-layout: "resume/single.go.html"
+layout: "resume"
 ---

@@ -50,10 +50,10 @@
                                 <p>{{ .name }}</p>
                                 <div class="resume-skill-rating">
                                     {{- range seq .rating }}
-                                        <div class="resume-skill-bar">{{ partial "resume/custom_svg.gohtml" "round_rect" }}</div>
+                                        <div class="resume-skill-bar">{{ partial "resume/custom_svg" "round_rect" }}</div>
                                     {{- end }}
                                     {{ range seq (sub 5 .rating) }}
-                                        <div class="resume-skill-bar resume-skill-bar--light">{{ partial "resume/custom_svg.gohtml" "round_rect" }}</div>
+                                        <div class="resume-skill-bar resume-skill-bar--light">{{ partial "resume/custom_svg" "round_rect" }}</div>
                                     {{ end }}
                                 </div>
                             </li>
@@ -72,7 +72,7 @@
                     <ul class="resume-certificate-list">
                         {{- range .Site.Data.resume.certificates }}
                             <li class="resume-certificate-item">
-                                {{ partial "resume/custom_svg.gohtml" .icon }}
+                                {{ partial "resume/custom_svg" .icon }}
                                 <div>
                                     <p>{{ .name }}</p>
                                     <p class="resume-certificate-issuer">{{ .issuer }}</p>
@@ -111,7 +111,7 @@
                     <ul class="resume-education-list">
                         {{- range .Site.Data.resume.education }}
                             <li class="resume-education-item resume-education-item--{{ .icon }}">
-                                {{ partial "resume/custom_svg.gohtml" .icon }}
+                                {{ partial "resume/custom_svg" .icon }}
                                 <div>
                                     <p class="resume-education-issuer">{{ .issuer }}</p>
                                     <p class="resume-education-degree">{{ .degree }}</p>
@@ -136,14 +136,14 @@
                 </div>
             </div>
 
-            {{ partial "resume/experience.gohtml" (dict "experience" .Site.Data.resume.experience "highlights" true) }}
+            {{ partial "resume/experience.html" (dict "experience" .Site.Data.resume.experience "highlights" true) }}
         </div>
     </div>
 </div>
 <div class="page resume-page">
     <div class="resume-content">
         <div class="resume-column resume-column-left">
-            {{ partial "resume/experience.gohtml" (dict "experience" .Site.Data.resume.experience "highlights" false) }}
+            {{ partial "resume/experience.html" (dict "experience" .Site.Data.resume.experience "highlights" false) }}
         </div>
     </div>
 </div>
