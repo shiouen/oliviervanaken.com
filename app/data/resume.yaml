@@ -49,7 +49,7 @@ experience:
   - client: Zetes People ID
     description: >
       Part of a Java API team specialized in signing and encryption for government identification systems in a business
-      unit with nearly zero AWS experience, which had to migrate APIs from on-premise Kubernetes to AWS ECS,
+      unit with near-zero AWS experience, which had to migrate APIs from on-premise Kubernetes to AWS ECS,
       while navigating rapidly changing requirements, deadlines and formalities of a Japanese client.
     details:
       - the code base counts nearly 20 Terraform projects
@@ -78,7 +78,7 @@ experience:
     highlighted: true
     icon: zetes
     location: Brussels, Belgium
-    role: DevOps Engineer
+    role: AWS Specialist
     skills: [ AWS, Containers, Terraform, Automation, Account Management, Cloud Migration, CI/CD, Python, Jenkins, Java, Signing, mTLS ]
     started: 2024-03
     type: Freelance
