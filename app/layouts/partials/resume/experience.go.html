@@ -17,7 +17,7 @@
         <ul class="resume-experience-list">
             {{ range $experience }}
                 {{ if or (not $highlights) (and $highlights .highlighted) }}
-                    <li class="resume-experience-item">
+                    <li class="resume-experience-item {{ if not $highlights }}resume-experience-item--{{.icon}}{{end}}">
                         <div class="resume-experience-anchor">{{ partial "resume/custom_svg.gohtml" "circle" }}</div>
 
                         <div class="resume-experience-icon">
