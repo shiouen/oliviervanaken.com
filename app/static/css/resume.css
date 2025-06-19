@@ -102,14 +102,14 @@ p + p {
     margin: 0;
 }
 
-svg {
-    display: block;
-}
-
 ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.block {
+    display: block;
 }
 
 .resume-certificate-issuer {
