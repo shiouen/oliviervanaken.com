@@ -333,3 +333,13 @@ ul {
 .resume-skills-list {
     gap: 7px;
 }
+
+@media print {
+    .resume-experience-item--nike {
+        margin-top: 80px;
+    }
+
+    .resume-experience-item--puratos {
+        margin-top: 30px;
+    }
+}

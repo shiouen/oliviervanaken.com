@@ -145,13 +145,13 @@ experience:
     - implemented an ETL monitoring application in Python using Jenkins and Terraform
     - implemented a Snowflake warehouse autoscaling application in Python using Jenkins, Kubernetes cron jobs and Helm
     - implemented Jenkins CI/CD pipelines for deploying jobs on Databricks
-    - open sourced the above CLI tool with permission of Nike on github.com
+#    - open sourced the above CLI tool with permission of Nike on github.com
     - automated AWS S3 syncs across multiple AWS accounts
     - implemented ETL jobs in Python for legacy applications using AWS Lambda, AWS S3 and Box
     - implemented dozens of Jenkins CI/CD pipelines
     - implemented a strict and efficient code development and reviewing process using GitHub and Jenkins
     - presented and standardized the above shared practices with the DevOps community
-    - documented all of the above in a documentation application in MkDocs using Terraform, Kubernetes and Helm
+#    - documented all of the above in a documentation application in MkDocs using Terraform, Kubernetes and Helm
     - interviewed software engineering profiles to fill positions within the application and platform teams
     ended: 2024-02
     highlighted: true
@@ -191,19 +191,19 @@ experience:
     details:
       - maintained the frontend foundation in an agile environment
       - developed frontend development tooling in Node.js for 50 teams of frontend developers
-      - reduced the frontend pipeline's duration from 1.5 hours to 10 minutes, or a 95% reduction, by migrating protractor testing from Jenkins to AWS Lambda
+      - reduced the frontend pipeline's duration by 95% from 1.5 hours to 10 minutes using AWS Lambda
       - developed frontend performance monitoring tooling using AWS EC2, ECS, Batch and Lambda
       - developed frontend components in AngularJS/SASS/HTML
       - led 4 teams in migrating their backend services to AWS
       - led 1 team in launching their greenfield API project on AWS
       - coached and trained 40 colleagues to ready them for the maintenance of their applications on AWS
-      - built architecture documents and made propositions to be validated by multiple boards of the client, e.g. board of architects, monitoring, CI/CD
+#      - built architecture documents and made propositions to be validated by multiple boards of the client, e.g. board of architects, monitoring, CI/CD
       - carried processes for approvals and assessments
       - assisted the teams with planning their cloud user stories
       - implemented proposed containerised services with ECS clusters, RDS, S3, Route53 and VPC
       - implemented proposed serverless APIs with ApiGateway, Lambda and DynamoDB
-      - implemented pipelines for the applications using Bitbucket, CodePipeline, CodeBuild
-      - collaborated  with the AWS engineers at payment start-up Tikkie, sharing knowledge and practices
+      - implemented CI/CD pipelines for the applications using Bitbucket, CodePipeline and CodeBuild
+#      - collaborated with the AWS engineers at payment start-up Tikkie, sharing knowledge and practices
     ended: 2019-08
     highlighted: true
     icon: abnamro
