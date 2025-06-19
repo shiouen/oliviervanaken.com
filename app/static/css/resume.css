@@ -103,7 +103,7 @@ p + p {
 }
 
 svg {
-    display: inline-block;
+    display: block;
 }
 
 ul {
