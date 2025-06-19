@@ -158,7 +158,7 @@ experience:
     icon: nike
     location: Antwerp, Belgium
     role: DevOps Engineer
-    skills: [ AWS, Containers, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Cloud Migration, ETL, Airflow, Databricks ]
+    skills: [ AWS, Containers, Terraform, Automation, CI/CD, Python, Kubernetes, Golang, Jenkins, Cloud Migration ]
     started: 2020-08
     type: Freelance
 
@@ -168,11 +168,11 @@ experience:
       other units in a tightly regulated financial environment.
     details:
       - designed application and platform solution diagrams together with the Solution Architect of the platform team
-      - communicated the application team's AWS service requirements for networking, security, pipelines and permissions to the platform team
-      - implemented application backend infrastructure with AWS CloudFront, ApiGateway, Lambda (Golang) using SAM and CloudFormation
-      - created CI/CD pipelines to build, test and deploy the serverless backend application using AWS CodePipeline, CodeBuild and CloudFormation
+      - communicated the application team AWS requirements to the platform team
+      - implemented backend infrastructure with AWS CloudFront, ApiGateway, Lambda (Golang) using SAM and CloudFormation
+      - implemented CI/CD pipelines for the backend application using AWS CodePipeline and CodeBuild
       - implemented dozens of IAM roles
-      - supported the platform team with their account infrastructure using AWS S3, Route53, DynamoDB, Cognito, EC2, ECS, VPC and WAF
+      - implemented platform infrastructure using AWS S3, Route53, DynamoDB, Cognito, EC2, ECS, VPC and WAF
       - interviewed DevOps profiles to fill positions within the application and platform teams
     ended: 2019-11
     highlighted: true
