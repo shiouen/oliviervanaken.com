@@ -79,7 +79,7 @@ experience:
     icon: zetes
     location: Brussels, Belgium
     role: AWS Specialist
-    skills: [ AWS, Containers, Terraform, Automation, Account Management, Cloud Migration, CI/CD, Python, Jenkins, Java, Signing, mTLS ]
+    skills: [ AWS, Containers, Terraform, Automation, Cloud Migration, CI/CD, Python, Jenkins, Java, Signing, mTLS ]
     started: 2024-03
     type: Freelance
 
@@ -149,7 +149,7 @@ experience:
     - automated AWS S3 syncs across multiple AWS accounts
     - implemented ETL jobs in Python for legacy applications using AWS Lambda, AWS S3 and Box
     - implemented dozens of Jenkins CI/CD pipelines
-    - implemented a strict code development and reviewing process using GitHub and Jenkins, which increased code quality delivered by the teams
+    - implemented a strict and efficient code development and reviewing process using GitHub and Jenkins
     - presented and standardized the above shared practices with the DevOps community
     - documented all of the above in a documentation application in MkDocs using Terraform, Kubernetes and Helm
     - interviewed software engineering profiles to fill positions within the application and platform teams
