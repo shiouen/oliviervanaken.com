@@ -126,37 +126,39 @@ experience:
 
   - client: Nike
     description: >
-      Maintained the DevOps and Kubernetes foundation of Nike Europe together with 50 DevOps colleagues
-      in an agile environment while being part of a Data Engineering team within a Data & Analytics business unit.
+      Maintained the DevOps and Kubernetes foundation of Nike Europe's distribution centers together with 30 DevOps colleagues
+      in an agile environment while being part of 3 Data Engineering teams within a Data & Analytics business unit.
     details:
-    - effectively increased the SLA performance and automated a support team's efforts with a nightly
-      monitoring application for automated detection, reporting and restarting of failed ETL jobs; these jobs
-      move data used in daily reports which are critical for distribution centre decision making and prevent the
-      business from running their distribution centres blindly; Python, Jenkins, Docker, MSSQL
-    - automated version and release management with a CLI tool written in Golang; it enables teams to
-      manage git versions in uniform fashion; Golang, Docker, Homebrew, Jenkins, Groovy
-    - multitude of Kubernetes cluster migrations between old and new AWS platforms, all the way up to
-      production; Kubernetes, EKS, Apache Airflow, Python, Jenkins, Terraform
-    - set up brand new Kubernetes environments on AWS for several teams; Kubernetes, EKS, Terraform,
-      Python, Jenkins
-    - administrated development and reviewing processes; GitHub
-    - lead and architected the teams' automation, quality control and operations; GitHub, Jenkins, Python
-    - interviewed software engineering profiles to fill positions within the application and platform teams
-    - architected and built an automated end-to-end testing pipeline which tests ETL flows across multiple
-      teams on Databricks; it checks whether all the teams' data workflows are working together as expected;
-      Databricks, Jenkins, Python
+    - designed and implemented AWS EKS Kubernetes clusters for multiple environments using Terraform, Kubernetes and Helm
+    - implemented Kubernetes cluster monitoring with Grafana and Prometheus using Terraform and Helm
+    - implemented a tagging policy module using Terraform for uniform tagging across all AWS resources created with Terraform
+    - implemented multiple Airflow base container images using Docker
+    - maintained 12 Airflow instances across multiple environments which host ETL tasks for 4 distribution centers
+    - implemented a shared Airflow package in Python used in the Airflow Python code across all instances
+    - implemented a shared Ops package in Python used in all code repositories of the teams
+    - implemented a shared Utils package in Python used in all code repositories of the teams
+    - implemented Jenkins CI/CD pipeline for deploying the Airflow instances and uploading the tasks and configurations
+    - maintained Jenkins instances for each team and automated configuration deployments
+    - implemented 5 Jenkins base container images using Docker to speed up legacy Jenkins CI/CD pipelines by 10 minutes
+    - implemented a CLI tool in golang which automates version and release management
+    - implemented automated version and release management in all Jenkins CI/CD pipelines
+    - implemented an ETL monitoring application in Python using Jenkins and Terraform
+    - implemented a Snowflake warehouse autoscaling application in Python using Jenkins, Kubernetes cron jobs and Helm
+    - implemented Jenkins CI/CD pipelines for deploying jobs on Databricks
+    - open sourced the above CLI tool with permission of Nike on github.com
     - automated AWS S3 syncs across multiple AWS accounts
-    - architected and implemented a solution for a manual time management business process; the
-      business migrated to a new badging and time tracking tool, for which they wanted no manual review
-      and editing process of invalid time entries; the solution syncs Box into AWS S3, from where AWS
-      Lambda picked up the files and filtered invalid time entries; AWS Lambda, Python, Box, cronjobs, AWS
-      S3
+    - implemented ETL jobs in Python for legacy applications using AWS Lambda, AWS S3 and Box
+    - implemented dozens of Jenkins CI/CD pipelines
+    - implemented a strict code development and reviewing process using GitHub and Jenkins, which increased code quality delivered by the teams
+    - presented and standardized the above shared practices with the DevOps community
+    - documented all of the above in a documentation application in MkDocs using Terraform, Kubernetes and Helm
+    - interviewed software engineering profiles to fill positions within the application and platform teams
     ended: 2024-02
     highlighted: true
     icon: nike
     location: Antwerp, Belgium
     role: DevOps Engineer
-    skills: [ AWS, Containers, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Databricks, Cloud Migration, Airflow ]
+    skills: [ AWS, Containers, Terraform, Automation, Python, Kubernetes, Golang, Jenkins, Cloud Migration, ETL, Airflow, Databricks ]
     started: 2020-08
     type: Freelance
 
