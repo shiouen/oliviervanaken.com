@@ -102,6 +102,10 @@ p + p {
     margin: 0;
 }
 
+svg {
+    display: inline-block;
+}
+
 ul {
     display: flex;
     flex-direction: column;
@@ -124,11 +128,11 @@ ul {
     justify-content: start;
 }
 
-.resume-column-left {
+.resume-column--left {
     flex: 9
 }
 
-.resume-column-right {
+.resume-column--right {
     flex: 16
 }
 

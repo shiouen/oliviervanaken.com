@@ -13,7 +13,7 @@
         <h2>{{ .Site.Data.resume.title }}</h2>
     </div>
     <div class="resume-content">
-        <div class="resume-column resume-column-left">
+        <div class="resume-column resume-column--left">
             <div class="resume-contact">
                 <div class="resume-content-header">
                     <h2>Contact</h2>
@@ -22,7 +22,7 @@
 
                 <div class="resume-content-container">
                     <ul class="resume-contact-list">
-                        {{- range .Site.Data.resume.socials }}
+                        {{ range .Site.Data.resume.socials }}
                             <li class="resume-contact-item">
                                 {{ partial "svg.html" . }}
                                 <span>
@@ -32,7 +32,7 @@
                                     </a>
                                 </span>
                             </li>
-                        {{- end }}
+                        {{ end }}
                     </ul>
                 </div>
             </div>
@@ -45,19 +45,19 @@
 
                 <div class="resume-content-container">
                     <ul class="resume-skills-list">
-                        {{- range .Site.Data.resume.skills }}
+                        {{ range .Site.Data.resume.skills }}
                             <li class="resume-skill-item">
                                 <p>{{ .name }}</p>
                                 <div class="resume-skill-rating">
-                                    {{- range seq .rating }}
+                                    {{ range seq .rating }}
                                         <div class="resume-skill-bar">{{ partial "resume/custom_svg" "round_rect" }}</div>
-                                    {{- end }}
+                                    {{ end }}
                                     {{ range seq (sub 5 .rating) }}
                                         <div class="resume-skill-bar resume-skill-bar--light">{{ partial "resume/custom_svg" "round_rect" }}</div>
                                     {{ end }}
                                 </div>
                             </li>
-                        {{- end }}
+                        {{ end }}
                     </ul>
                 </div>
             </div>
@@ -70,7 +70,7 @@
 
                 <div class="resume-content-container">
                     <ul class="resume-certificate-list">
-                        {{- range .Site.Data.resume.certificates }}
+                        {{ range .Site.Data.resume.certificates }}
                             <li class="resume-certificate-item">
                                 {{ partial "resume/custom_svg" .icon }}
                                 <div>
@@ -78,7 +78,7 @@
                                     <p class="resume-certificate-issuer">{{ .issuer }}</p>
                                 </div>
                             </li>
-                        {{- end }}
+                        {{ end }}
                     </ul>
                 </div>
             </div>
@@ -91,12 +91,12 @@
 
                 <div class="resume-content-container">
                     <ul class="resume-language-list">
-                        {{- range .Site.Data.resume.language }}
+                        {{ range .Site.Data.resume.language }}
                             <li class="resume-language-item">
                                 <p>{{ .name }}</p>
                                 <p>{{ .level }}</p>
                             </li>
-                        {{- end }}
+                        {{ end }}
                     </ul>
                 </div>
             </div>
@@ -109,7 +109,7 @@
 
                 <div class="resume-content-container">
                     <ul class="resume-education-list">
-                        {{- range .Site.Data.resume.education }}
+                        {{ range .Site.Data.resume.education }}
                             <li class="resume-education-item resume-education-item--{{ .icon }}">
                                 {{ partial "resume/custom_svg" .icon }}
                                 <div>
@@ -118,13 +118,13 @@
                                     <p class="resume-education-date">{{ .started }} - {{ .ended }}</p>
                                 </div>
                             </li>
-                        {{- end }}
+                        {{ end }}
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="resume-column resume-column-right">
+        <div class="resume-column resume-column--right">
             <div class="resume-objective">
                 <div class="resume-content-header">
                     <h2>Objective</h2>
