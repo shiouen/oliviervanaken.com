@@ -9,8 +9,15 @@
 <body class="resume">
 <div class="page resume-page">
     <div class="resume-header">
-        <h1>{{ .Site.Data.resume.name }}</h1>
-        <h2>{{ .Site.Data.resume.title }}</h2>
+        <div class="resume-header-text">
+            <h1>{{ .Site.Data.resume.name }}</h1>
+            <h2>{{ .Site.Data.resume.title }}</h2>
+        </div>
+
+        <div class="resume-header-image">
+            <img draggable="false" src="/images/profile.png" alt="profile_picture" title="profile_picture">
+        </div>
+
     </div>
     <div class="resume-content">
         <div class="resume-column resume-column--left">
