@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Site.Data.resume.name }} - Resume</title>
+    <link rel="stylesheet" href="/css/sheets-of-paper-a4.css">
+    <link rel="stylesheet" href="/css/resume.css">
+</head>
+<body class="resume">
+<div class="page resume-page">
+    <div class="resume-header">
+        <div class="resume-header-text">
+            <h1>{{ .Site.Data.resume.name }}</h1>
+            <h2>{{ .Site.Data.resume.title }}</h2>
+        </div>
+
+        <div class="resume-header-image">
+            <img draggable="false" src="/images/profile.png" alt="profile_picture" title="profile_picture">
+        </div>
+
+    </div>
+    <div class="resume-content">
+        <div class="resume-column resume-column--left">
+            <div class="resume-contact">
+                <div class="resume-content-header">
+                    <h2>Contact</h2>
+                    <div class="resume-separator"></div>
+                </div>
+
+                <div class="resume-content-container">
+                    <ul class="resume-contact-list">
+                        {{ range .Site.Data.resume.socials }}
+                            <li class="resume-contact-item">
+                                {{ partial "svg.html" . }}
+                                <span>
+                                    <a href="{{ printf "%s%s" .prefix .value | safeURL }}"
+                                       target="_blank" rel="noopener noreferrer">
+                                        {{ .value }}
+                                    </a>
+                                </span>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="resume-skills">
+                <div class="resume-content-header">
+                    <h2>Skills</h2>
+                    <div class="resume-separator"></div>
+                </div>
+
+                <div class="resume-content-container">
+                    <ul class="resume-skills-list">
+                        {{ range .Site.Data.resume.skills }}
+                            <li class="resume-skill-item">
+                                <p>{{ .name }}</p>
+                                <div class="resume-skill-rating">
+                                    {{ range seq .rating }}
+                                        <div class="resume-skill-bar">{{ partial "resume/custom_svg" "round_rect" }}</div>
+                                    {{ end }}
+                                    {{ range seq (sub 5 .rating) }}
+                                        <div class="resume-skill-bar resume-skill-bar--light">{{ partial "resume/custom_svg" "round_rect" }}</div>
+                                    {{ end }}
+                                </div>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="resume-certificates">
+                <div class="resume-content-header">
+                    <h2>Certificates</h2>
+                    <div class="resume-separator"></div>
+                </div>
+
+                <div class="resume-content-container">
+                    <ul class="resume-certificate-list">
+                        {{ range .Site.Data.resume.certificates }}
+                            <li class="resume-certificate-item">
+                                {{ partial "resume/custom_svg" .icon }}
+                                <div>
+                                    <p>{{ .name }}</p>
+                                    <p class="resume-certificate-issuer">{{ .issuer }}</p>
+                                </div>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="resume-language">
+                <div class="resume-content-header">
+                    <h2>Language</h2>
+                    <div class="resume-separator"></div>
+                </div>
+
+                <div class="resume-content-container">
+                    <ul class="resume-language-list">
+                        {{ range .Site.Data.resume.language }}
+                            <li class="resume-language-item">
+                                <p>{{ .name }}</p>
+                                <p>{{ .level }}</p>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="resume-education">
+                <div class="resume-content-header">
+                    <h2>Education</h2>
+                    <div class="resume-separator"></div>
+                </div>
+
+                <div class="resume-content-container">
+                    <ul class="resume-education-list">
+                        {{ range .Site.Data.resume.education }}
+                            <li class="resume-education-item resume-education-item--{{ .icon }}">
+                                {{ partial "resume/custom_svg" .icon }}
+                                <div>
+                                    <p class="resume-education-issuer">{{ .issuer }}</p>
+                                    <p class="resume-education-degree">{{ .degree }}</p>
+                                    <p class="resume-education-date">{{ .started }} - {{ .ended }}</p>
+                                </div>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-column resume-column--right">
+            <div class="resume-objective">
+                <div class="resume-content-header">
+                    <h2>Objective</h2>
+                    <div class="resume-separator"></div>
+                </div>
+
+                <div class="resume-content-container">
+                    {{ .Site.Data.resume.objective }}
+                </div>
+            </div>
+
+            {{ partial "resume/experience" (dict "experience" .Site.Data.resume.experience "highlights" true) }}
+        </div>
+    </div>
+</div>
+<div class="page resume-page">
+    <div class="resume-content">
+        <div class="resume-column resume-column-left">
+            {{ partial "resume/experience" (dict "experience" .Site.Data.resume.experience "highlights" false) }}
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{{ $start := time (printf "%s-01" .started) }}
+{{ $end := time (printf "%s-28" .ended) }}
+
+{{ $startText := time.Format "Jan 2006" $start }}
+{{ $endText := time.Format "Jan 2006" $end }}
+
+{{ $yearDiff := sub $end.Year $start.Year }}
+{{ $monthDiff := sub $end.Month $start.Month }}
+
+{{ if lt $monthDiff 0 }}
+{{ $yearDiff = sub $yearDiff 1 }}
+{{ $monthDiff = add $monthDiff 12 }}
+{{ end }}
+
+{{ $totalMonths := add (add (mul $yearDiff 12) $monthDiff) 1 }}  {{/* +1 to include end month */}}
+
+{{ $finalYears := div $totalMonths 12 }}
+{{ $finalMonths := mod $totalMonths 12 }}
+
+{{ $parts := slice }}
+
+{{ if gt $finalYears 0 }}
+{{ $yearLabel := cond (eq $finalYears 1) "year" "years" }}
+{{ $parts = $parts | append (printf "%d %s" $finalYears $yearLabel) }}
+{{ end }}
+
+{{ if gt $finalMonths 0 }}
+{{ $monthLabel := cond (eq $finalMonths 1) "month" "months" }}
+{{ $parts = $parts | append (printf "%d %s" $finalMonths $monthLabel) }}
+{{ end }}
+
+{{ $duration := delimit $parts " " }}
+
+{{ printf "%s - %s (%s)" $startText $endText $duration }}

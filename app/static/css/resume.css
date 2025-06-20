@@ -1,0 +1,367 @@
+/* FONTS see https://transfonter.org/ */
+@font-face {
+    font-family: "Century Gothic";
+    src: url("/fonts/CenturyGothic-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* RESET */
+h1, h2, h3, h4 {
+    margin: 0
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* MAIN */
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 100%;
+}
+
+h2 {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h4 {
+    color: #384257;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+li {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: start;
+}
+
+p + p {
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.block {
+    display: block;
+}
+
+.resume-certificate-issuer {
+    font-size: 11px;
+}
+
+.resume-certificate-item {
+    svg {
+        width: 20px;
+    }
+}
+
+.resume-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.resume-column--left {
+    flex: 9
+}
+
+.resume-column--right {
+    flex: 16
+}
+
+.resume-contact-item {
+
+    span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    svg {
+        width: 16px;
+    }
+}
+
+.resume-content, .resume-header {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.resume-content {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.resume-content-container {
+    padding: 20px 0 20px 8px;
+}
+
+.resume-content-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.resume-education-degree, .resume-education-date {
+    font-size: 11px;
+}
+
+.resume-education-item {
+    svg {
+        padding-top: 5px;
+        width: 20px;
+    }
+}
+
+.resume-education-item--kdg {
+    svg {
+        width: 25px;
+    }
+}
+
+.resume-experience-anchor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-26.5px, 4px);
+
+    svg {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+.resume-experience-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+}
+
+.resume-experience-description {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    gap: 7px;
+    justify-content: space-between;
+}
+
+.resume-experience-detail {
+    display: list-item;
+}
+
+.resume-experience-details {
+    gap: 0;
+    list-style: disc outside;
+    padding-left: 20px;
+}
+
+.resume-experience-icon {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 24px;
+    justify-content: center;
+    margin-right: 15px;
+    width: 24px;
+}
+
+.resume-experience-item {
+    display: grid;
+    gap: 0;
+    grid-template-columns: auto 1fr;
+    position: relative;
+}
+
+.resume-experience-list {
+    gap: 25px;
+}
+
+.resume-experience-skill {
+    border: 1px solid #384257;
+    border-radius: 3px;
+    color: #384257;
+    display: inline-block;
+    padding: 1px 5px;
+}
+
+.resume-experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: 5px;
+}
+
+.resume-experience-timeline {
+    border-left: 1px solid #000000;
+    margin-top: 15px;
+}
+
+.resume-header {
+    background-color: #384257;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 101px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    h1 {
+        color: #ffffff;
+    }
+
+    h2 {
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: none;
+    }
+}
+
+.resume-header-image {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    width: 80px;
+    position: relative;
+    overflow: hidden;
+
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.resume-header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.resume-language-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.resume-page {
+    padding: 0;
+}
+
+.resume-separator {
+    flex: 1;
+    border-top: 1px solid #000000;
+}
+
+.resume-skill-item {
+    justify-content: space-between;
+    padding-right: 8px;
+}
+
+.resume-skill-rating {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.resume-skill-bar {
+    width: 15px;
+    height: 5px;
+    border-radius: 3px;
+}
+
+.resume-skill-bar--dark {
+    color: #384257;
+}
+
+.resume-skill-bar--light {
+    color: #A8B8DA;
+
+}
+
+.resume-skills-list {
+    gap: 7px;
+}
+
+@media print {
+    .resume-experience-item--nike {
+        margin-top: 80px;
+    }
+
+    .resume-experience-item--puratos {
+        margin-top: 30px;
+    }
+}

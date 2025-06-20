@@ -1,0 +1,321 @@
+# header
+name: Olivier Van Aken
+title: DevOps Engineer
+
+# contact
+socials:
+  - name: phone
+    prefix: "tel:"
+    value: "+32476742003"
+  - name: email
+    prefix: "mailto:"
+    value: "olivier@restechnica.io"
+  - name: website
+    prefix: "https://"
+    value: "oliviervanaken.com"
+  - name: linkedin
+    prefix: "https://"
+    value: "linkedin.com/in/oliviervanaken"
+  - name: github
+    prefix: "https://"
+    value: "github.com/shiouen"
+
+# objective
+objective: >
+  Freelance IT professional with 9 years of experience, specializing in Cloud and DevOps.
+  I design and implement secure, scalable systems that are built to last—without compromising on deadlines.
+
+# skills
+skills:
+  - name: AWS
+    rating: 5
+  - name: CI/CD
+    rating: 5
+  - name: Terraform
+    rating: 5
+  - name: Containers
+    rating: 5
+  - name: Kubernetes
+    rating: 4
+  - name: Python
+    rating: 4
+  - name: Golang
+    rating: 4
+  - name: Azure
+    rating: 3
+
+# experience
+experience:
+  - client: Zetes People ID
+    description: >
+      Part of a Java API team specialized in signing and encryption for government identification systems in a business
+      unit with near-zero AWS experience, which had to migrate APIs from on-premise Kubernetes to AWS ECS,
+      while navigating rapidly changing requirements, deadlines and formalities of a Japanese client.
+    details:
+      - the code base counts nearly 20 Terraform projects
+      - designed and implemented a strictly private multi-VPC AWS network with VPC peering using Terraform
+      - implemented private AWS service connections with VPC endpoints using Terraform
+      - implemented AWS ECS Fargate services, tasks and container definitions with logging using Terraform
+      - implemented autoscaling, network load balancers and application load balancers using Terraform
+      - configured RDS Aurora databases using terraform and implemented database migration side car containers for the services
+      - implemented around 50 IAM roles using Terraform
+      - implemented variable management with SSM parameters and SM secrets using Terraform
+      - implemented mTLS certificate creation and management using Terraform
+      - designed and implemented AWS account and organization structure using Terraform
+      - automated AWS account creation using Terraform and Python
+      - implemented Terraform state management in AWS S3 as part of AWS account creation
+      - implemented IAM Identity Center integrations with Azure Entra ID as part of AWS account creation
+      - implemented on-premise Jenkins CI/CD pipeline access with AWS IAM Roles Anywhere as part of AWS account creation
+      - implemented account budgets and alerts as part of AWS account creation
+      - implemented Jenkins CI/CD pipeline and a CLI to deploy different projects and components separately or all together
+      - implemented library of 20 reusable Terraform modules
+      - implemented modular Terraform projects which enabled the overseas client to plug and play the Terraform resources with their own existing resources already deployed with AWS CloudFormation
+      - managed 10 different deployment environments for both parties
+      - implemented tag policies using Terraform
+      - reduced AWS account costs by 70% with optimizations of the VPC resources
+      - close collaboration with overseas Japanese development teams
+    ended: 2024-10
+    highlighted: true
+    icon: zetes
+    location: Brussels, Belgium
+    role: DevOps Engineer
+    skills: [ AWS, Containers, Terraform, Automation, Cloud Migration, CI/CD, Python, Jenkins, Java, Signing, mTLS ]
+    started: 2024-03
+    type: Freelance
+
+  - client: Telenet
+    description: >
+      Filled in on a project to maintain delivery continuity while part of a team providing an in-house API development
+      platform, which has the intention of migrating internal legacy applications to a cloud based platform with a
+      uniform logic and design.
+    details:
+      - deployed a new environment with containerized AWS lambdas using Terraform and GitLab CI/CD pipelines
+      - documented the deployment process of the new environment, filling the gaps of the existing environment documentation
+      - shared know-how about the inner workings of specific AWS Lambda configurations
+      - implemented AWS tagging policies
+      - reviewed current infrastructure and CI/CD pipelines, documented issues found on Jira as improvement stories
+    ended: 2024-12
+    highlighted: false
+    icon: telenet
+    location: Brussels, Belgium
+    role: DevOps Engineer
+    skills: [ AWS, Gitlab, Containers, Terraform, Automation, CI/CD, Python, Serverless ]
+    started: 2024-10
+    type: Freelance
+
+  - client: Moobii
+    description: >
+      One-man project to build a .NET API backend which integrates with the Belgian government's eHealth patient
+      platform and is used daily by over 20 Belgian healthcare institutions for all their patients.
+    details:
+      - designed and implemented a .NET REST API backend in C#
+      - maintained Azure environment and compute instances using Azure App Service and Terraform
+      - set up git repositories and deployment pipelines in Azure DevOps
+      - implemented JSON Web token encryption and signing in C# to authenticate with the eHealth services
+      - set up the certificates used for encryption and signing using Azure Key Vault and Terraform
+      - set up the secrets used for encryption and signing using Azure Key Vault and Terraform
+      - wrapped the government VESTA SOAP API with a .NET REST API in C#
+    ended: 2021-06
+    highlighted: false
+    icon: moobii
+    location: Brussels, Belgium
+    role: Full Stack & Cloud Engineer
+    skills: [ Azure, .NET, C#, API, Encryption, mTLS, SOAP, HTTP ]
+    started: 2021-05
+    type: Freelance
+
+  - client: Nike
+    description: >
+      Maintained the DevOps and Kubernetes foundation of Nike Europe's distribution centers together with 30 DevOps colleagues
+      in an agile environment while being part of 3 Data Engineering teams within a Data & Analytics business unit.
+    details:
+    - designed and implemented AWS EKS Kubernetes clusters for multiple environments using Terraform, Kubernetes and Helm
+    - implemented Kubernetes cluster monitoring with Grafana and Prometheus using Terraform and Helm
+    - implemented a tagging policy module using Terraform for uniform tagging across all AWS resources created with Terraform
+    - implemented multiple Airflow base container images using Docker
+    - maintained 12 Airflow instances across multiple environments which host ETL tasks for 4 distribution centers
+    - implemented a shared Airflow package in Python used in the Airflow Python code across all instances
+    - implemented a shared Ops package in Python used in all code repositories of the teams
+    - implemented a shared Utils package in Python used in all code repositories of the teams
+    - implemented Jenkins CI/CD pipeline for deploying the Airflow instances and uploading the tasks and configurations
+    - maintained Jenkins instances for each team and automated configuration deployments
+    - implemented 5 Jenkins base container images using Docker to speed up legacy Jenkins CI/CD pipelines by 10 minutes
+    - implemented a CLI tool in golang which automates version and release management
+    - implemented automated version and release management in all Jenkins CI/CD pipelines
+    - implemented an ETL monitoring application in Python using Jenkins and Terraform
+    - implemented a Snowflake warehouse autoscaling application in Python using Jenkins, Kubernetes cron jobs and Helm
+    - implemented Jenkins CI/CD pipelines for deploying jobs on Databricks
+#    - open sourced the above CLI tool with permission of Nike on github.com
+    - automated AWS S3 syncs across multiple AWS accounts
+    - implemented ETL jobs in Python for legacy applications using AWS Lambda, AWS S3 and Box
+    - implemented dozens of Jenkins CI/CD pipelines
+    - implemented a strict and efficient code development and reviewing process using GitHub and Jenkins
+    - presented and standardized the above shared practices with the DevOps community
+#    - documented all of the above in a documentation application in MkDocs using Terraform, Kubernetes and Helm
+    - interviewed software engineering profiles to fill positions within the application and platform teams
+    ended: 2024-02
+    highlighted: true
+    icon: nike
+    location: Antwerp, Belgium
+    role: DevOps Engineer
+    skills: [ AWS, Containers, Terraform, Automation, CI/CD, Python, Kubernetes, Golang, Jenkins, Cloud Migration ]
+    started: 2020-08
+    type: Freelance
+
+  - client: Barclays
+    description: >
+      Part of an iOS app team in a transformational business unit where new technologies are adopted faster compared to
+      other units in a tightly regulated financial environment.
+    details:
+      - designed application and platform solution diagrams together with the Solution Architect of the platform team
+      - communicated the application team AWS requirements to the platform team
+      - implemented backend infrastructure with AWS CloudFront, ApiGateway, Lambda (Golang) using SAM and CloudFormation
+      - implemented CI/CD pipelines for the backend application using AWS CodePipeline and CodeBuild
+      - implemented dozens of IAM roles
+      - implemented platform infrastructure using AWS S3, Route53, DynamoDB, Cognito, EC2, ECS, VPC and WAF
+      - interviewed DevOps profiles to fill positions within the application and platform teams
+    ended: 2019-11
+    highlighted: true
+    icon: barclays
+    location: Manchester, UK
+    role: Cloud Engineer
+    skills: [ AWS, Coaching, Automation, Golang, Node.js, Cloud Migration, Serverless ]
+    started: 2019-08
+    type: Consultant (Capgemini)
+
+  - client: ABN Amro Bank
+    description: >
+      Started as member of the team which maintained the frontend foundation and gradually took
+      the position of cloud consultant during a considerably large cloud migration
+      in a tightly regulated financial environment.
+    details:
+      - maintained the frontend foundation in an agile environment
+      - developed frontend development tooling in Node.js for 50 teams of frontend developers
+      - reduced the frontend pipeline's duration by 95% from 1.5 hours to 10 minutes using AWS Lambda
+      - developed frontend performance monitoring tooling using AWS EC2, ECS, Batch and Lambda
+      - developed frontend components in AngularJS/SASS/HTML
+      - led 4 teams in migrating their backend services to AWS
+      - led 1 team in launching their greenfield API project on AWS
+      - coached and trained 40 colleagues to prepare them for the maintenance of their applications on AWS
+#      - built architecture documents and made propositions to be validated by multiple boards of the client, e.g. board of architects, monitoring, CI/CD
+      - carried processes for approvals and assessments
+      - assisted the teams with planning their cloud user stories
+      - implemented proposed containerised services with ECS clusters, RDS, S3, Route53 and VPC
+      - implemented proposed serverless APIs with ApiGateway, Lambda and DynamoDB
+      - implemented CI/CD pipelines for the applications using Bitbucket, CodePipeline and CodeBuild
+#      - collaborated with the AWS engineers at payment start-up Tikkie, sharing knowledge and practices
+    ended: 2019-08
+    highlighted: true
+    icon: abnamro
+    location: Amsterdam, Netherlands
+    role: Full Stack & Cloud Engineer
+    skills: [ AWS, Coaching, Groovy, Containers, Node.js, Jenkins, Cloud Migration, JavaScript, Angular, CSS, SCSS ]
+    started: 2017-09
+    type: Consultant (Capgemini)
+
+  - client: Puratos
+    description: Filled in on a project to maintain delivery continuity.
+    details:
+      - developed components in AngularJS/SASS/HTML (Jekyll) for the frontend
+      - refactored legacy components in AngularJS/SASS/HTML (Jekyll) for the frontend
+    ended: 2017-09
+    highlighted: false
+    icon: puratos
+    location: Antwerp, Belgium
+    role: Web Developer
+    skills: [ Jekyll, JavaScript, Angular, HTML, CSS, SCSS ]
+    started: 2017-08
+    type: Consultant (Capgemini)
+
+  - client: Argenta
+    description: >
+      Part of the team responsible for the client's internet banking web application, which serves thousands of
+      customers daily in a tightly regulated financial environment.
+    details:
+      - developed AngularJS/LESS/HTML components for the frontend
+      - developed Java Spring/Camel API components for the backend
+      - responsible for quality control and made sure unit testing coverage was up to standards
+      - developed entire user stories in an agile scrum environment
+      - led the migration to Java/Groovy configuration as code for Jenkins CI/CD pipelines
+      - monitored production on-premise services and databases
+      - on-call support role for production
+    ended: 2017-06
+    highlighted: false
+    icon: argenta
+    location: Antwerp, Belgium
+    role: Full Stack Engineer
+    skills: [ Java, Spring, API, Jenkins, Groovy, Angular, JavaScript, HTML, CSS, LESS ]
+    started: 2016-12
+    type: Consultant (Capgemini)
+
+  - client: FLAVR
+    description: Startup environment where flexibility and tight deadlines are key.
+    details:
+      - created new frontend components in AngularJS/SASS/HTML (MEAN stack)
+      - created new backend components in Node.js/Express/MongoDB (MEAN stack)
+      - created responsive e-mail templates for the marketing strategy in MJML
+      - maintained AWS EC2 environments with basic scaling and load balancing
+      - on-call support role for production
+    ended: 2016-08
+    highlighted: false
+    icon: flavr
+    location: Antwerp, Belgium
+    role: Full Stack Developer
+    skills: [ AWS, MongoDB, API, HTML, Node.js, Angular, CSS, SCSS, MJML ]
+    started: 2016-06
+    type: Freelance
+
+#  - client: GET Time & Security
+#    ended: 2012-07
+#    highlighted: false
+#    icon: primion
+#    location: Antwerp, Belgium
+#    role: Developer
+#    skills: [ Ruby, Python ]
+#    started: 2012-07
+#    type: Internship
+#
+#  - client: BMW Centrauto
+#    ended: 2011-07
+#    highlighted: false
+#    icon: bmw
+#    location: Antwerp, Belgium
+#    role: Developer
+#    skills: [ Bash ]
+#    started: 2011-06
+#    type: Internship
+
+certificates:
+  - icon: aws
+    issuer: Amazon Web Services (AWS)
+    name: Solutions Architect Associate
+  - icon: aws
+    issuer: Amazon Web Services (AWS)
+    name: Developer Associate
+  - icon: scrum
+    issuer: Scrum.org
+    name: Professional Scrum Master I
+
+# language
+language:
+  - name: Dutch
+    level: Native
+  - name: English
+    level: Fluent
+  - name: French
+    level: Conversational
+  - name: German
+    level: Basic
+
+# education
+education:
+  - degree: Bachelor of Applied Science (B.A.Sc.), Computer Sciences
+    ended: 2016
+    icon: kdg
+    issuer: Karel de Grote, Antwerp
+    started: 2013
+  - degree: Bachelor of Science (B.Sc.), Computer Sciences
+    ended: 2013
+    icon: ua
+    issuer: University of Antwerp
+    started: 2011
