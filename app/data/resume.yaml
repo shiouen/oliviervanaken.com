@@ -196,7 +196,7 @@ experience:
       - developed frontend components in AngularJS/SASS/HTML
       - led 4 teams in migrating their backend services to AWS
       - led 1 team in launching their greenfield API project on AWS
-      - coached and trained 40 colleagues to ready them for the maintenance of their applications on AWS
+      - coached and trained 40 colleagues to prepare them for the maintenance of their applications on AWS
 #      - built architecture documents and made propositions to be validated by multiple boards of the client, e.g. board of architects, monitoring, CI/CD
       - carried processes for approvals and assessments
       - assisted the teams with planning their cloud user stories
@@ -236,8 +236,8 @@ experience:
       - developed Java Spring/Camel API components for the backend
       - responsible for quality control and made sure unit testing coverage was up to standards
       - developed entire user stories in an agile scrum environment
-      - lead the migration to Java/Groovy configuration as code for Jenkins CI/CD pipelines
-      - monitor production on-premise services and databases
+      - led the migration to Java/Groovy configuration as code for Jenkins CI/CD pipelines
+      - monitored production on-premise services and databases
       - on-call support role for production
     ended: 2017-06
     highlighted: false
@@ -249,7 +249,7 @@ experience:
     type: Consultant (Capgemini)
 
   - client: FLAVR
-    description: Startup environment where flexibility and strict deadlines are key.
+    description: Startup environment where flexibility and tight deadlines are key.
     details:
       - created new frontend components in AngularJS/SASS/HTML (MEAN stack)
       - created new backend components in Node.js/Express/MongoDB (MEAN stack)
