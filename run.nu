@@ -37,7 +37,7 @@ def deploy-app [] {
 
     let bucket_name = (aws ssm get-parameter --name "/oliviervanaken.com/bucket-name" --no-cli-pager) | from json | get Parameter.Value
 
-    aws s3 sync $dist_path $"s3://($bucket_name)" --exclude "*.txt" --cache-control "max-age=604800"
+    aws s3 sync $dist_path $"s3://($bucket_name)" --exclude "*.txt" --exclude "*.DS_Store" --cache-control "max-age=604800"
 }
 
 def deploy-infra [approve: bool = false] {

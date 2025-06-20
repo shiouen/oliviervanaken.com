@@ -1,7 +1,7 @@
 resource "aws_acm_certificate" "certificate" {
-  domain_name               = local.domain_name
+  domain_name       = local.domain_name
   subject_alternative_names = [local.domain_name]
-  validation_method         = "DNS"
+  validation_method = "DNS"
 
   provider = aws.us-east-1
 }
@@ -13,7 +13,7 @@ resource "aws_acm_certificate_validation" "certificate_validation" {
 }
 
 resource "aws_cloudfront_distribution" "distribution" {
-  aliases             = [local.domain_name]
+  aliases = [local.domain_name]
   default_root_object = "index.html"
   enabled             = true
   price_class         = "PriceClass_200"
@@ -26,8 +26,8 @@ resource "aws_cloudfront_distribution" "distribution" {
   }
 
   default_cache_behavior {
-    allowed_methods        = ["GET", "HEAD"]
-    cached_methods         = ["GET", "HEAD"]
+    allowed_methods = ["GET", "HEAD"]
+    cached_methods = ["GET", "HEAD"]
     compress               = true
     target_origin_id       = aws_s3_bucket.bucket.bucket
     viewer_protocol_policy = "redirect-to-https"
@@ -38,6 +38,11 @@ resource "aws_cloudfront_distribution" "distribution" {
       cookies {
         forward = "none"
       }
+    }
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.index-redirect.arn
     }
   }
 
@@ -58,6 +63,15 @@ resource "aws_cloudfront_distribution" "distribution" {
     ssl_support_method  = "sni-only"
   }
 }
+
+resource "aws_cloudfront_function" "index-redirect" {
+  code = file("${path.module}/index-redirect.js")
+  comment = "Redirects /path or /path/ to the /path/index.html"
+  name    = "${local.project_id}-index-redirect"
+  publish = true
+  runtime = "cloudfront-js-2.0"
+}
+
 
 resource "aws_cloudfront_origin_access_control" "oac" {
   name                              = aws_s3_bucket.bucket.bucket
@@ -89,7 +103,7 @@ resource "aws_route53_record" "validation_record" {
 
   allow_overwrite = true
   name            = each.value.name
-  records         = [each.value.record]
+  records = [each.value.record]
   ttl             = 60
   type            = each.value.type
   zone_id         = aws_route53_zone.hosted_zone.zone_id
