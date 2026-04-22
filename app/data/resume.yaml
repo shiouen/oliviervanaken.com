@@ -46,6 +46,28 @@ skills:
 
 # experience
 experience:
+  - client: National Bank of Belgium
+    description: >
+      Part of an operational team with near-zero Python experience which maintained GitLab instances and provided teams with CI/CD components for
+      different languages and systems, with a focus on JWT and authentication lifecycles.
+    details:
+      - designed and implemented GitLab CI/CD pipelines for Python, .NET and Java projects
+      - implemented a GitLab component to request and clean up Azure credentials for Azure deployments using Python
+      - refactored a GitLab component to request and clean up Artifactory credentials for publishing artifacts using Python
+      - implemented a Python SDK for GitLab, Azure and OAuth2 integrations
+      - implemented and maintained around 30 container images used as build images for GitLab CI/CD pipelines
+      - designed a set of Python code and quality standards to the team
+      - implemented a Python CLI used to build, publish and quality check Python projects using UV, Ruff, Pytest and Coverage
+      - implemented GitLab components used to build, publish and quality check Python projects using the above Python CLI
+      - implemented a tool to automate audits of GitLab project and group settings using Python
+    ended: 2026-06
+    highlighted: true
+    icon: nbb
+    location: Brussels, Belgium
+    role: DevOps Engineer
+    skills: [ GitLab, Python, Containers, Azure, Automation, CI/CD, Artifactory, JWT, OAuth2 ]
+    started: 2025-09
+    type: Freelance
   - client: Zetes People ID
     description: >
       Part of a Java API team specialized in signing and encryption for government identification systems in a business
