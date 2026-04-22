@@ -55,7 +55,7 @@ experience:
       - implemented a GitLab component to request and clean up Azure credentials for Azure deployments using Python
       - refactored a GitLab component to request and clean up Artifactory credentials for publishing artifacts using Python
       - implemented a Python SDK for GitLab, Azure and OAuth2 integrations
-      - implemented and maintained around 30 container images used as build images for GitLab CI/CD pipelines
+      - implemented and maintained around 30 container images used as build images for GitLab CI/CD pipelines using Docker
       - designed a set of Python code and quality standards to the team
       - implemented a Python CLI used to build, publish and quality check Python projects using UV, Ruff, Pytest and Coverage
       - implemented GitLab components used to build, publish and quality check Python projects using the above Python CLI
@@ -197,7 +197,7 @@ experience:
       - implemented platform infrastructure using AWS S3, Route53, DynamoDB, Cognito, EC2, ECS, VPC and WAF
       - interviewed DevOps profiles to fill positions within the application and platform teams
     ended: 2019-11
-    highlighted: true
+    highlighted: false
     icon: barclays
     location: Manchester, UK
     role: Cloud Engineer

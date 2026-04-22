@@ -358,11 +358,11 @@ ul {
 }
 
 @media print {
-    .resume-experience-item--nike {
-        margin-top: 80px;
+    .resume-experience-item--moobii {
+        margin-top: 50px;
     }
 
-    .resume-experience-item--puratos {
-        margin-top: 30px;
+    .resume-experience-item--abnamro {
+        margin-top: 120px;
     }
 }
