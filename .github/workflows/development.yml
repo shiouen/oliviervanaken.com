@@ -5,7 +5,7 @@ on:
     branches-ignore: [ main ]
 
 env:
-  GO_VERSION: 1.21
+  GO_VERSION: 1.26
   HUGO_VERSION: 0.147.3
   NUSHELL_VERSION: 0.98.0
   SBOT_VERSION: 1.7.2
@@ -15,10 +15,10 @@ jobs:
     name: pipeline
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: set up go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           cache-dependency-path: app/go.sum
           go-version: ${{ env.GO_VERSION }}
@@ -29,7 +29,7 @@ jobs:
           sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: set up nushell
-        uses: hustcer/setup-nu@v3.8
+        uses: hustcer/setup-nu@v3
         with:
           version: ${{ env.NUSHELL_VERSION }}
 
@@ -53,24 +53,24 @@ jobs:
         run: nu run.nu build
 
       - name: authenticate gcs
-        uses: google-github-actions/auth@v2
+        uses: google-github-actions/auth@v3
         with:
           credentials_json: ${{ secrets.GCS_SA_KEY }}
 
       - name: set up gcloud
-        uses: google-github-actions/setup-gcloud@v2
+        uses: google-github-actions/setup-gcloud@v3
         with:
           version: ">= 522.0.0"
 
       - name: authenticate aws
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-region: eu-central-1
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: set up terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4
 
       - name: try infra
         run: nu run.nu try-infra
