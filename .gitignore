@@ -3,6 +3,7 @@
 env.json
 
 ### Hugo
+app/_vendor
 public/
 themes/
 
