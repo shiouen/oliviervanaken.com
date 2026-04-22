@@ -30,6 +30,7 @@ pagerSize = 5
 
 [params]
 defaultTheme = "auto"
+disableScrollToTop = true
 keywords = ["developer", "blog", "page", "cv", "resume"]
 GitRepositoryUrl = "github.com/shiouen/oliviervanaken.com"
 ShowAllPagesInArchive = true
