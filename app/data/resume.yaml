@@ -119,7 +119,7 @@ experience:
     ended: 2024-12
     highlighted: false
     icon: telenet
-    location: Brussels, Belgium
+    location: Mechelen, Belgium
     role: DevOps Engineer
     skills: [ AWS, Gitlab, Containers, Terraform, Automation, CI/CD, Python, Serverless ]
     started: 2024-10
@@ -140,7 +140,7 @@ experience:
     ended: 2021-06
     highlighted: false
     icon: moobii
-    location: Brussels, Belgium
+    location: Antwerp, Belgium
     role: Full Stack & Cloud Engineer
     skills: [ Azure, .NET, C#, API, Encryption, mTLS, SOAP, HTTP ]
     started: 2021-05
