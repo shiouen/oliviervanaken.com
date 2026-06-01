@@ -11,7 +11,7 @@ Professional developer web page for Olivier Van Aken.
 
 ### Development
 
-* Golang: 1.21
+* Golang: 1.26
 * Hugo: 0.147.3
 * PaperMod: 8.0
 
